@@ -1,166 +1,74 @@
-package main
+package editor
 
 import (
-	"fmt"
+	"github.com/NeerajRijhwani/code-editor/internal/buffer"
+	"github.com/NeerajRijhwani/code-editor/internal/cursor"
+	"github.com/NeerajRijhwani/code-editor/internal/renderer"
 	"github.com/gdamore/tcell/v3"
-	"github.com/gdamore/tcell/v3/color"
-	"log"
 )
 
 type Editor struct {
-	lines []string
-
-	cursorX int
-	cursorY int
-	scrollX int
-	scrollY int
+	Buffer   *buffer.Buffer
+	Cursor   *cursor.Cursor
+	Renderer *renderer.Renderer
+	running  bool
 }
 
-func initEditor() *Editor {
-
-	return &Editor{
-		lines:   make([]string, 1),
-		cursorX: 1,
-		cursorY: 1,
-		scrollX: 1,
-		scrollY: 1,
-	}
+func quitEditor(e *Editor) {
+	e.Renderer.Quit()
 }
 
-func main() {
-	fmt.Println("hello")
-	initScreen()
-
-}
-
-func drawBox(s tcell.Screen, x1, y1, x2, y2 int, style tcell.Style, text string) {
-	if y2 < y1 {
-		y1, y2 = y2, y1
-	}
-	if x2 < x1 {
-		x1, x2 = x2, x1
-	}
-
-	// Fill background
-	for row := y1; row <= y2; row++ {
-		for col := x1; col <= x2; col++ {
-			s.Put(col, row, " ", style)
-		}
-	}
-
-	// Draw borders
-	for col := x1; col <= x2; col++ {
-		s.Put(col, y1, string(tcell.RuneHLine), style)
-		s.Put(col, y2, string(tcell.RuneHLine), style)
-	}
-	for row := y1 + 1; row < y2; row++ {
-		s.Put(x1, row, string(tcell.RuneVLine), style)
-		s.Put(x2, row, string(tcell.RuneVLine), style)
-	}
-
-	// Only draw corners if necessary
-	if y1 != y2 && x1 != x2 {
-		s.Put(x1, y1, string(tcell.RuneULCorner), style)
-		s.Put(x2, y1, string(tcell.RuneURCorner), style)
-		s.Put(x1, y2, string(tcell.RuneLLCorner), style)
-		s.Put(x2, y2, string(tcell.RuneLRCorner), style)
-	}
-
-	drawText(s, x1+1, y1+1, x2-1, y2-1, style, text)
-}
-
-func drawText(s tcell.Screen, x1, y1, x2, y2 int, style tcell.Style, text string) {
-	row := y1
-	col := x1
-	var width int
-	for text != "" {
-		text, width = s.Put(col, row, text, style)
-		col += width
-		if col >= x2 {
-			row++
-			col = x1
-		}
-		if row > y2 {
-			break
-		}
-		if width == 0 {
-			// incomplete grapheme at end of string
-			break
-		}
-	}
-}
-
-func renderText(e *Editor, s tcell.Screen, style tcell.Style) {
-	value := e.lines[len(e.lines)-1]
-	drawBox(s, e.cursorX, e.cursorY, e.cursorX+len(value), e.cursorY, style, value)
-
-	e.cursorX++
-	if e.cursorX > 10 {
-		e.cursorY++
-		e.cursorX = 0
-	}
-}
-
-func updateLine(e *Editor, key string) {
-	e.lines[e.cursorY-1] += key
-	fmt.Println(key)
-}
-
-func initScreen() {
-	boxStyle := tcell.StyleDefault.Foreground(color.White).Background(color.Black)
-	defStyle := tcell.StyleDefault.Background(color.Reset).Foreground(color.Reset)
-
-	s, err := tcell.NewScreen()
+func InitEditor() (*Editor, error) {
+	b := buffer.InitBuffer()
+	c := cursor.InitCursor()
+	r, err := renderer.InitRenderer()
 	if err != nil {
-		log.Fatalf("%+v", err)
-		log.Fatalf("%+v", err)
+		return nil, err
 	}
+	return &Editor{
+		Buffer:   b,
+		Cursor:   c,
+		Renderer: r,
+		running:  true,
+	}, nil
+}
 
-	if err := s.Init(); err != nil {
-		log.Fatalf("%+v", err)
+func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
+	x, y := ev.Position()
+	totalcols, _ := e.Buffer.LineLength(x)
+	if y > totalcols {
+		e.Cursor.SetCursor(x, totalcols-1)
+	} else {
+		e.Cursor.SetCursor(x, y)
 	}
-	// Set default text style
+}
 
-	s.SetStyle(defStyle)
-	s.EnableMouse()
-	s.EnablePaste()
-	// Clear screen
-	s.Clear()
+func (e *Editor) render() {
+	e.Renderer.Clear()
 
-	editor := initEditor()
+	e.Renderer.DrawBorder(150, 150)
 
-	defer quit(s)
+	e.Renderer.DrawBuffer(e.Buffer)
 
-	// ox, oy := -1, -1
+	e.Renderer.DrawCursor(e.Cursor)
 
-	for {
+	e.Renderer.Show()
+}
 
-		s.Show()
-		ev := <-s.EventQ()
-
+func (e *Editor) Run() {
+	// fmt.Println("terminal has started")
+	for e.running {
+		ev := <-e.Renderer.Screen.EventQ()
 		switch ev := ev.(type) {
 		case *tcell.EventResize:
-			s.Sync()
+			e.Renderer.Sync()
 		case *tcell.EventKey:
-			if ev.Key() == tcell.KeyEscape || ev.Key() == tcell.KeyCtrlC {
-				return
-			} else if ev.Key() == tcell.KeyCtrlL {
-				s.Sync()
-			} else {
-				updateLine(editor, ev.Name())
-				renderText(editor, s, boxStyle)
-			}
+			e.HandleKey(ev)
+			e.render()
+			// case *tcell.EventMouse:
+			// 	e.HandleMouse(ev)
 		}
 	}
-}
-
-func quit(s tcell.Screen) {
-	// You have to catch panics in a defer, clean up, and
-	// re-raise them - otherwise your application can
-	// die without leaving any diagnostic trace.
-	maybePanic := recover()
-	s.Fini()
-	if maybePanic != nil {
-		panic(maybePanic)
-	}
+	// fmt.Println("terminal has ended")
+	defer quitEditor(e)
 }

@@ -1,0 +1,2237 @@
+2026/07/18 12:10:23 Editor Started
+2026/07/18 12:10:24 Key Pressed : h
+2026/07/18 12:10:24 0 and 0
+2026/07/18 12:10:24 Key Pressed : e
+2026/07/18 12:10:24 0 and 1
+2026/07/18 12:10:24 Key Pressed : l
+2026/07/18 12:10:24 0 and 2
+2026/07/18 12:10:25 Key Pressed : l
+2026/07/18 12:10:25 0 and 3
+2026/07/18 12:10:25 Key Pressed : o
+2026/07/18 12:10:25 0 and 4
+2026/07/18 12:10:25 Key Pressed : p
+2026/07/18 12:10:25 0 and 5
+2026/07/18 12:10:25 Enter Pressed
+2026/07/18 12:10:26 Key Pressed : w
+2026/07/18 12:10:26 1 and 0
+2026/07/18 12:10:27 Key Pressed : o
+2026/07/18 12:10:27 1 and 1
+2026/07/18 12:10:27 Key Pressed : r
+2026/07/18 12:10:27 1 and 2
+2026/07/18 12:10:27 Key Pressed : l
+2026/07/18 12:10:27 1 and 3
+2026/07/18 12:10:27 Key Pressed : d
+2026/07/18 12:10:27 1 and 4
+2026/07/18 12:10:28 Enter Pressed
+2026/07/18 12:10:29 Key Pressed : m
+2026/07/18 12:10:29 2 and 0
+2026/07/18 12:10:29 Key Pressed : y
+2026/07/18 12:10:29 2 and 1
+2026/07/18 12:10:29 Key Pressed :  
+2026/07/18 12:10:29 2 and 2
+2026/07/18 12:10:30 Key Pressed : m
+2026/07/18 12:10:30 2 and 3
+2026/07/18 12:10:30 Key Pressed : a
+2026/07/18 12:10:30 2 and 4
+2026/07/18 12:10:30 Key Pressed : ,
+2026/07/18 12:10:30 2 and 5
+2026/07/18 12:10:30 Key Pressed : e
+2026/07/18 12:10:30 2 and 6
+2026/07/18 12:10:31 Enter Pressed
+2026/07/18 12:10:31 Key Pressed : i
+2026/07/18 12:10:31 3 and 0
+2026/07/18 12:10:31 Key Pressed : s
+2026/07/18 12:10:31 3 and 1
+2026/07/18 12:10:31 Key Pressed :  
+2026/07/18 12:10:31 3 and 2
+2026/07/18 12:10:32 Key Pressed : n
+2026/07/18 12:10:32 3 and 3
+2026/07/18 12:10:32 Key Pressed : e
+2026/07/18 12:10:32 3 and 4
+2026/07/18 12:10:32 Key Pressed : e
+2026/07/18 12:10:32 3 and 5
+2026/07/18 12:10:33 Enter Pressed
+2026/07/18 12:13:29 Editor Started
+2026/07/18 12:13:30 Key Pressed : h
+2026/07/18 12:13:30 0 and 0
+2026/07/18 12:13:30 Key Pressed : e
+2026/07/18 12:13:30 0 and 1
+2026/07/18 12:13:30 Key Pressed : l
+2026/07/18 12:13:30 0 and 2
+2026/07/18 12:13:30 Key Pressed : l
+2026/07/18 12:13:30 0 and 3
+2026/07/18 12:13:30 Key Pressed : o
+2026/07/18 12:13:30 0 and 4
+2026/07/18 12:13:30 Key Pressed :  
+2026/07/18 12:13:30 0 and 5
+2026/07/18 12:13:31 Key Pressed : w
+2026/07/18 12:13:31 0 and 6
+2026/07/18 12:13:31 Key Pressed : o
+2026/07/18 12:13:31 0 and 7
+2026/07/18 12:13:31 Key Pressed : r
+2026/07/18 12:13:31 0 and 8
+2026/07/18 12:13:31 Key Pressed : l
+2026/07/18 12:13:31 0 and 9
+2026/07/18 12:13:31 Key Pressed : d
+2026/07/18 12:13:31 0 and 10
+2026/07/18 12:13:31 Enter Pressed
+2026/07/18 12:13:32 Key Pressed : m
+2026/07/18 12:13:32 1 and 0
+2026/07/18 12:13:32 Key Pressed : y
+2026/07/18 12:13:32 1 and 1
+2026/07/18 12:13:33 Key Pressed :  
+2026/07/18 12:13:33 1 and 2
+2026/07/18 12:13:33 Key Pressed : n
+2026/07/18 12:13:33 1 and 3
+2026/07/18 12:13:33 Key Pressed : a
+2026/07/18 12:13:33 1 and 4
+2026/07/18 12:13:33 Key Pressed : m
+2026/07/18 12:13:33 1 and 5
+2026/07/18 12:13:33 Key Pressed : e
+2026/07/18 12:13:33 1 and 6
+2026/07/18 12:13:33 Key Pressed :  
+2026/07/18 12:13:33 1 and 7
+2026/07/18 12:13:34 Key Pressed : i
+2026/07/18 12:13:34 1 and 8
+2026/07/18 12:13:34 Key Pressed : s
+2026/07/18 12:13:34 1 and 9
+2026/07/18 12:13:34 Key Pressed :  
+2026/07/18 12:13:34 1 and 10
+2026/07/18 12:13:34 Key Pressed : N
+2026/07/18 12:13:34 1 and 11
+2026/07/18 12:13:35 Key Pressed : e
+2026/07/18 12:13:35 1 and 12
+2026/07/18 12:13:35 Key Pressed : e
+2026/07/18 12:13:35 1 and 13
+2026/07/18 12:13:35 Key Pressed : r
+2026/07/18 12:13:35 1 and 14
+2026/07/18 12:13:35 Key Pressed : a
+2026/07/18 12:13:35 1 and 15
+2026/07/18 12:13:35 Key Pressed : j
+2026/07/18 12:13:35 1 and 16
+2026/07/18 12:13:36 Key Pressed :  
+2026/07/18 12:13:36 1 and 17
+2026/07/18 12:13:36 Enter Pressed
+2026/07/18 12:13:37 Key Pressed : h
+2026/07/18 12:13:37 2 and 0
+2026/07/18 12:13:38 Key Pressed : o
+2026/07/18 12:13:38 2 and 1
+2026/07/18 12:13:38 Key Pressed : w
+2026/07/18 12:13:38 2 and 2
+2026/07/18 12:13:38 Key Pressed :  
+2026/07/18 12:13:38 2 and 3
+2026/07/18 12:13:38 Key Pressed : a
+2026/07/18 12:13:38 2 and 4
+2026/07/18 12:13:38 Key Pressed : r
+2026/07/18 12:13:38 2 and 5
+2026/07/18 12:13:39 Key Pressed : e
+2026/07/18 12:13:39 2 and 6
+2026/07/18 12:13:39 Key Pressed :  
+2026/07/18 12:13:39 2 and 7
+2026/07/18 12:13:39 Key Pressed : y
+2026/07/18 12:13:39 2 and 8
+2026/07/18 12:13:39 Key Pressed : o
+2026/07/18 12:13:39 2 and 9
+2026/07/18 12:13:40 Key Pressed : u
+2026/07/18 12:13:40 2 and 10
+2026/07/18 12:13:40 LeftKey Pressed
+2026/07/18 12:13:40 LeftKey Pressed
+2026/07/18 12:13:40 LeftKey Pressed
+2026/07/18 12:13:41 LeftKey Pressed
+2026/07/18 12:13:41 LeftKey Pressed
+2026/07/18 12:13:41 LeftKey Pressed
+2026/07/18 12:13:41 LeftKey Pressed
+2026/07/18 12:13:41 Enter Pressed
+2026/07/18 12:15:10 Editor Started
+2026/07/18 12:15:10 Key Pressed : h
+2026/07/18 12:15:10 0 and 0
+2026/07/18 12:15:10 Key Pressed : e
+2026/07/18 12:15:10 0 and 1
+2026/07/18 12:15:11 Key Pressed : l
+2026/07/18 12:15:11 0 and 2
+2026/07/18 12:15:11 Key Pressed : l
+2026/07/18 12:15:11 0 and 3
+2026/07/18 12:15:11 Key Pressed : o
+2026/07/18 12:15:11 0 and 4
+2026/07/18 12:15:11 Key Pressed :  
+2026/07/18 12:15:11 0 and 5
+2026/07/18 12:15:11 Key Pressed : w
+2026/07/18 12:15:11 0 and 6
+2026/07/18 12:15:11 Key Pressed : o
+2026/07/18 12:15:11 0 and 7
+2026/07/18 12:15:12 Key Pressed : r
+2026/07/18 12:15:12 0 and 8
+2026/07/18 12:15:12 Key Pressed : l
+2026/07/18 12:15:12 0 and 9
+2026/07/18 12:15:12 Key Pressed : d
+2026/07/18 12:15:12 0 and 10
+2026/07/18 12:15:12 Key Pressed :  
+2026/07/18 12:15:12 0 and 11
+2026/07/18 12:15:12 Key Pressed : m
+2026/07/18 12:15:12 0 and 12
+2026/07/18 12:15:13 Key Pressed : y
+2026/07/18 12:15:13 0 and 13
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:14 LeftKey Pressed
+2026/07/18 12:15:15 Enter Pressed
+2026/07/18 12:15:15 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:16 RightKey Pressed
+2026/07/18 12:15:17 Key Pressed : \
+2026/07/18 12:15:17 1 and 8
+2026/07/18 12:15:17 Backspace Pressed
+2026/07/18 12:15:17 Enter Pressed
+2026/07/18 12:15:18 Key Pressed : m
+2026/07/18 12:15:18 2 and 0
+2026/07/18 12:15:18 Key Pressed : y
+2026/07/18 12:15:18 2 and 1
+2026/07/18 12:15:19 Key Pressed :  
+2026/07/18 12:15:19 2 and 2
+2026/07/18 12:15:19 Key Pressed : n
+2026/07/18 12:15:19 2 and 3
+2026/07/18 12:15:19 Key Pressed : a
+2026/07/18 12:15:19 2 and 4
+2026/07/18 12:15:19 Key Pressed : m
+2026/07/18 12:15:19 2 and 5
+2026/07/18 12:15:19 Key Pressed : e
+2026/07/18 12:15:19 2 and 6
+2026/07/18 12:15:19 Key Pressed :  
+2026/07/18 12:15:19 2 and 7
+2026/07/18 12:15:19 Key Pressed : i
+2026/07/18 12:15:19 2 and 8
+2026/07/18 12:15:20 Key Pressed : s
+2026/07/18 12:15:20 2 and 9
+2026/07/18 12:15:20 Key Pressed :  
+2026/07/18 12:15:20 2 and 10
+2026/07/18 12:15:20 Enter Pressed
+2026/07/18 12:15:21 Key Pressed : n
+2026/07/18 12:15:21 3 and 0
+2026/07/18 12:15:21 Key Pressed : e
+2026/07/18 12:15:21 3 and 1
+2026/07/18 12:15:21 Key Pressed : e
+2026/07/18 12:15:21 3 and 2
+2026/07/18 12:15:21 Key Pressed : r
+2026/07/18 12:15:21 3 and 3
+2026/07/18 12:15:22 Key Pressed : a
+2026/07/18 12:15:22 3 and 4
+2026/07/18 12:15:22 Key Pressed : j
+2026/07/18 12:15:22 3 and 5
+2026/07/18 12:15:22 UpKey Pressed
+2026/07/18 12:15:23 LeftKey Pressed
+2026/07/18 12:15:24 LeftKey Pressed
+2026/07/18 12:15:24 LeftKey Pressed
+2026/07/18 12:15:24 LeftKey Pressed
+2026/07/18 12:15:24 LeftKey Pressed
+2026/07/18 12:15:24 LeftKey Pressed
+2026/07/18 12:15:24 Enter Pressed
+2026/07/18 12:15:25 Enter Pressed
+2026/07/18 12:15:25 Enter Pressed
+2026/07/18 12:15:25 UpKey Pressed
+2026/07/18 12:15:25 UpKey Pressed
+2026/07/18 12:15:26 Key Pressed : h
+2026/07/18 12:15:26 3 and 0
+2026/07/18 12:15:27 Key Pressed : o
+2026/07/18 12:15:27 3 and 1
+2026/07/18 12:15:27 Key Pressed : w
+2026/07/18 12:15:27 3 and 2
+2026/07/18 12:15:27 Key Pressed :  
+2026/07/18 12:15:27 3 and 3
+2026/07/18 12:15:28 Key Pressed : t
+2026/07/18 12:15:28 3 and 4
+2026/07/18 12:15:28 Key Pressed : h
+2026/07/18 12:15:28 3 and 5
+2026/07/18 12:15:28 Key Pressed : e
+2026/07/18 12:15:28 3 and 6
+2026/07/18 12:15:28 Key Pressed :  
+2026/07/18 12:15:28 3 and 7
+2026/07/18 12:15:28 Key Pressed : f
+2026/07/18 12:15:28 3 and 8
+2026/07/18 12:15:28 Key Pressed : u
+2026/07/18 12:15:28 3 and 9
+2026/07/18 12:15:29 Key Pressed : c
+2026/07/18 12:15:29 3 and 10
+2026/07/18 12:15:29 Key Pressed : l
+2026/07/18 12:15:29 3 and 11
+2026/07/18 12:15:29 Key Pressed :  
+2026/07/18 12:15:29 3 and 12
+2026/07/18 12:15:29 Backspace Pressed
+2026/07/18 12:15:29 Backspace Pressed
+2026/07/18 12:15:30 Key Pressed : k
+2026/07/18 12:15:30 3 and 11
+2026/07/18 12:15:30 Key Pressed :  
+2026/07/18 12:15:30 3 and 12
+2026/07/18 12:15:30 Key Pressed : d
+2026/07/18 12:15:30 3 and 13
+2026/07/18 12:15:31 Key Pressed : i
+2026/07/18 12:15:31 3 and 14
+2026/07/18 12:15:31 Key Pressed : d
+2026/07/18 12:15:31 3 and 15
+2026/07/18 12:15:31 Key Pressed : i
+2026/07/18 12:15:31 3 and 16
+2026/07/18 12:15:31 Key Pressed :  
+2026/07/18 12:15:31 3 and 17
+2026/07/18 12:15:32 Backspace Pressed
+2026/07/18 12:15:32 Backspace Pressed
+2026/07/18 12:15:32 Backspace Pressed
+2026/07/18 12:15:33 Key Pressed : d
+2026/07/18 12:15:33 3 and 15
+2026/07/18 12:15:33 Key Pressed :  
+2026/07/18 12:15:33 3 and 16
+2026/07/18 12:15:33 Key Pressed : i
+2026/07/18 12:15:33 3 and 17
+2026/07/18 12:15:33 Key Pressed :  
+2026/07/18 12:15:33 3 and 18
+2026/07/18 12:15:33 Key Pressed : m
+2026/07/18 12:15:33 3 and 19
+2026/07/18 12:15:34 Key Pressed : a
+2026/07/18 12:15:34 3 and 20
+2026/07/18 12:15:34 Key Pressed : k
+2026/07/18 12:15:34 3 and 21
+2026/07/18 12:15:34 Key Pressed : e
+2026/07/18 12:15:34 3 and 22
+2026/07/18 12:15:34 Key Pressed :  
+2026/07/18 12:15:34 3 and 23
+2026/07/18 12:15:34 Key Pressed : y
+2026/07/18 12:15:34 3 and 24
+2026/07/18 12:15:34 Key Pressed : y
+2026/07/18 12:15:34 3 and 25
+2026/07/18 12:15:35 Backspace Pressed
+2026/07/18 12:15:35 Backspace Pressed
+2026/07/18 12:15:35 Key Pressed : t
+2026/07/18 12:15:35 3 and 24
+2026/07/18 12:15:35 Key Pressed : h
+2026/07/18 12:15:35 3 and 25
+2026/07/18 12:15:36 Key Pressed : i
+2026/07/18 12:15:36 3 and 26
+2026/07/18 12:15:36 Key Pressed : s
+2026/07/18 12:15:36 3 and 27
+2026/07/18 12:15:36 Key Pressed :  
+2026/07/18 12:15:36 3 and 28
+2026/07/18 12:15:37 Enter Pressed
+2026/07/18 12:15:37 Key Pressed : h
+2026/07/18 12:15:37 4 and 0
+2026/07/18 12:15:37 Key Pressed : a
+2026/07/18 12:15:37 4 and 1
+2026/07/18 12:15:37 Key Pressed : h
+2026/07/18 12:15:37 4 and 2
+2026/07/18 12:15:37 Key Pressed : a
+2026/07/18 12:15:37 4 and 3
+2026/07/18 12:15:38 Key Pressed : h
+2026/07/18 12:15:38 4 and 4
+2026/07/18 12:15:38 Key Pressed : a
+2026/07/18 12:15:38 4 and 5
+2026/07/18 12:15:38 Key Pressed : h
+2026/07/18 12:15:38 4 and 6
+2026/07/18 12:15:38 Key Pressed : h
+2026/07/18 12:15:38 4 and 7
+2026/07/18 12:15:38 Key Pressed : a
+2026/07/18 12:15:38 4 and 8
+2026/07/18 12:15:38 LeftKey Pressed
+2026/07/18 12:15:39 UpKey Pressed
+2026/07/18 12:15:40 Enter Pressed
+2026/07/18 12:15:40 RightKey Pressed
+2026/07/18 12:15:40 RightKey Pressed
+2026/07/18 12:15:41 RightKey Pressed
+2026/07/18 12:15:41 RightKey Pressed
+2026/07/18 12:15:41 Enter Pressed
+2026/07/18 12:15:41 RightKey Pressed
+2026/07/18 12:15:42 RightKey Pressed
+2026/07/18 12:15:42 RightKey Pressed
+2026/07/18 12:15:42 LeftKey Pressed
+2026/07/18 12:15:42 LeftKey Pressed
+2026/07/18 12:15:43 Backspace Pressed
+2026/07/18 12:15:43 RightKey Pressed
+2026/07/18 12:15:43 RightKey Pressed
+2026/07/18 12:15:43 RightKey Pressed
+2026/07/18 12:15:43 Enter Pressed
+2026/07/18 12:15:44 RightKey Pressed
+2026/07/18 12:15:44 Key Pressed : \
+2026/07/18 12:15:44 6 and 1
+2026/07/18 12:15:45 Backspace Pressed
+2026/07/18 12:15:45 Backspace Pressed
+2026/07/18 12:15:45 RightKey Pressed
+2026/07/18 12:15:45 Enter Pressed
+2026/07/18 12:15:46 RightKey Pressed
+2026/07/18 12:15:46 RightKey Pressed
+2026/07/18 12:15:47 LeftKey Pressed
+2026/07/18 12:15:47 Backspace Pressed
+2026/07/18 12:15:47 RightKey Pressed
+2026/07/18 12:15:47 RightKey Pressed
+2026/07/18 12:15:47 RightKey Pressed
+2026/07/18 12:15:47 RightKey Pressed
+2026/07/18 12:15:48 Enter Pressed
+2026/07/18 12:15:48 RightKey Pressed
+2026/07/18 12:15:49 Backspace Pressed
+2026/07/18 12:15:49 RightKey Pressed
+2026/07/18 12:15:49 RightKey Pressed
+2026/07/18 12:15:49 RightKey Pressed
+2026/07/18 12:15:50 RightKey Pressed
+2026/07/18 12:15:50 Enter Pressed
+2026/07/18 12:15:51 Backspace Pressed
+2026/07/18 12:15:51 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:52 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:53 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 Backspace Pressed
+2026/07/18 12:15:54 DownKey Pressed
+2026/07/18 12:15:54 DownKey Pressed
+2026/07/18 12:15:55 DownKey Pressed
+2026/07/18 12:15:55 DownKey Pressed
+2026/07/18 12:15:55 DownKey Pressed
+2026/07/18 12:15:55 UpKey Pressed
+2026/07/18 12:15:56 DownKey Pressed
+2026/07/18 12:15:56 Backspace Pressed
+2026/07/18 12:15:56 Merge Line error: row exceeds buffer length
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:57 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:15:58 Backspace Pressed
+2026/07/18 12:17:07 Editor Started
+2026/07/18 12:17:08 Key Pressed : h
+2026/07/18 12:17:08 0 and 0
+2026/07/18 12:17:08 Key Pressed : r
+2026/07/18 12:17:08 0 and 1
+2026/07/18 12:17:09 Backspace Pressed
+2026/07/18 12:17:09 Key Pressed : e
+2026/07/18 12:17:09 0 and 1
+2026/07/18 12:17:09 Key Pressed : k
+2026/07/18 12:17:09 0 and 2
+2026/07/18 12:17:09 Key Pressed : l
+2026/07/18 12:17:09 0 and 3
+2026/07/18 12:17:09 Key Pressed : k
+2026/07/18 12:17:09 0 and 4
+2026/07/18 12:17:10 Key Pressed : l
+2026/07/18 12:17:10 0 and 5
+2026/07/18 12:17:10 Key Pressed : o
+2026/07/18 12:17:10 0 and 6
+2026/07/18 12:17:10 Key Pressed : s
+2026/07/18 12:17:10 0 and 7
+2026/07/18 12:17:10 Key Pressed : j
+2026/07/18 12:17:10 0 and 8
+2026/07/18 12:17:10 Key Pressed : d
+2026/07/18 12:17:10 0 and 9
+2026/07/18 12:17:11 Key Pressed : j
+2026/07/18 12:17:11 0 and 10
+2026/07/18 12:17:11 Key Pressed : f
+2026/07/18 12:17:11 0 and 11
+2026/07/18 12:17:11 LeftKey Pressed
+2026/07/18 12:17:11 LeftKey Pressed
+2026/07/18 12:17:11 LeftKey Pressed
+2026/07/18 12:17:11 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 LeftKey Pressed
+2026/07/18 12:17:12 Backspace Pressed
+2026/07/18 12:17:13 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 RightKey Pressed
+2026/07/18 12:17:14 Enter Pressed
+2026/07/18 12:17:16 Key Pressed : m
+2026/07/18 12:17:16 1 and 0
+2026/07/18 12:17:16 Key Pressed : y
+2026/07/18 12:17:16 1 and 1
+2026/07/18 12:17:16 Key Pressed :  
+2026/07/18 12:17:16 1 and 2
+2026/07/18 12:17:17 Key Pressed : n
+2026/07/18 12:17:17 1 and 3
+2026/07/18 12:17:17 Key Pressed : a
+2026/07/18 12:17:17 1 and 4
+2026/07/18 12:17:17 Key Pressed : m
+2026/07/18 12:17:17 1 and 5
+2026/07/18 12:17:17 Key Pressed : e
+2026/07/18 12:17:17 1 and 6
+2026/07/18 12:17:17 Key Pressed :  
+2026/07/18 12:17:17 1 and 7
+2026/07/18 12:17:18 Key Pressed : i
+2026/07/18 12:17:18 1 and 8
+2026/07/18 12:17:18 Key Pressed : s
+2026/07/18 12:17:18 1 and 9
+2026/07/18 12:17:18 Key Pressed :  
+2026/07/18 12:17:18 1 and 10
+2026/07/18 12:17:20 Key Pressed : H
+2026/07/18 12:17:20 1 and 11
+2026/07/18 12:17:20 Key Pressed : e
+2026/07/18 12:17:20 1 and 12
+2026/07/18 12:17:20 Key Pressed : r
+2026/07/18 12:17:20 1 and 13
+2026/07/18 12:17:20 Key Pressed : c
+2026/07/18 12:17:20 1 and 14
+2026/07/18 12:17:21 Key Pressed : u
+2026/07/18 12:17:21 1 and 15
+2026/07/18 12:17:21 Key Pressed : l
+2026/07/18 12:17:21 1 and 16
+2026/07/18 12:17:21 Key Pressed : e
+2026/07/18 12:17:21 1 and 17
+2026/07/18 12:17:21 Key Pressed : s
+2026/07/18 12:17:21 1 and 18
+2026/07/18 12:17:21 Key Pressed : s
+2026/07/18 12:17:21 1 and 19
+2026/07/18 12:17:22 LeftKey Pressed
+2026/07/18 12:17:22 LeftKey Pressed
+2026/07/18 12:17:22 Backspace Pressed
+2026/07/18 12:17:22 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:23 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:24 Backspace Pressed
+2026/07/18 12:17:25 Backspace Pressed
+2026/07/18 12:17:25 Backspace Pressed
+2026/07/18 12:17:25 Backspace Pressed
+2026/07/18 12:17:25 Backspace Pressed
+2026/07/18 12:17:26 Backspace Pressed
+2026/07/18 12:17:26 Backspace Pressed
+2026/07/18 12:17:26 Backspace Pressed
+2026/07/18 12:17:26 Backspace Pressed
+2026/07/18 12:17:26 Enter Pressed
+2026/07/18 12:17:26 Enter Pressed
+2026/07/18 12:17:27 Enter Pressed
+2026/07/18 12:17:27 Enter Pressed
+2026/07/18 12:17:27 UpKey Pressed
+2026/07/18 12:17:27 Backspace Pressed
+2026/07/18 12:17:27 Backspace Pressed
+2026/07/18 12:17:27 Backspace Pressed
+2026/07/18 12:17:28 Backspace Pressed
+2026/07/18 12:17:28 DownKey Pressed
+2026/07/18 12:17:29 LeftKey Pressed
+2026/07/18 12:17:29 LeftKey Pressed
+2026/07/18 12:17:29 Backspace Pressed
+2026/07/18 12:17:29 Backspace Pressed
+2026/07/18 12:17:30 Backspace Pressed
+2026/07/18 12:17:30 Backspace Pressed
+2026/07/18 12:17:30 Backspace Pressed
+2026/07/18 12:17:30 Backspace Pressed
+2026/07/18 12:17:30 RightKey Pressed
+2026/07/18 12:17:31 RightKey Pressed
+2026/07/18 12:17:31 Backspace Pressed
+2026/07/18 12:17:31 Backspace Pressed
+2026/07/18 12:18:04 Key Pressed : h
+2026/07/18 12:18:04 0 and 0
+2026/07/18 12:18:05 Backspace Pressed
+2026/07/18 12:19:20 Editor Started
+2026/07/18 12:19:21 Key Pressed : h
+2026/07/18 12:19:21 0 and 0
+2026/07/18 12:19:21 Key Pressed : e
+2026/07/18 12:19:21 0 and 1
+2026/07/18 12:19:21 Key Pressed : l
+2026/07/18 12:19:21 0 and 2
+2026/07/18 12:19:21 Key Pressed : l
+2026/07/18 12:19:21 0 and 3
+2026/07/18 12:19:21 Key Pressed : o
+2026/07/18 12:19:21 0 and 4
+2026/07/18 12:19:22 Key Pressed :  
+2026/07/18 12:19:22 0 and 5
+2026/07/18 12:19:22 Key Pressed : m
+2026/07/18 12:19:22 0 and 6
+2026/07/18 12:19:22 Key Pressed : y
+2026/07/18 12:19:22 0 and 7
+2026/07/18 12:19:23 Key Pressed :  
+2026/07/18 12:19:23 0 and 8
+2026/07/18 12:19:23 Key Pressed : n
+2026/07/18 12:19:23 0 and 9
+2026/07/18 12:19:23 Key Pressed : a
+2026/07/18 12:19:23 0 and 10
+2026/07/18 12:19:23 Key Pressed : m
+2026/07/18 12:19:23 0 and 11
+2026/07/18 12:19:23 Key Pressed : e
+2026/07/18 12:19:23 0 and 12
+2026/07/18 12:19:23 Key Pressed :  
+2026/07/18 12:19:23 0 and 13
+2026/07/18 12:19:23 Key Pressed : i
+2026/07/18 12:19:23 0 and 14
+2026/07/18 12:19:24 Key Pressed : s
+2026/07/18 12:19:24 0 and 15
+2026/07/18 12:19:24 Key Pressed :  
+2026/07/18 12:19:24 0 and 16
+2026/07/18 12:19:24 Key Pressed : n
+2026/07/18 12:19:24 0 and 17
+2026/07/18 12:19:24 Key Pressed : e
+2026/07/18 12:19:24 0 and 18
+2026/07/18 12:19:24 Key Pressed : e
+2026/07/18 12:19:24 0 and 19
+2026/07/18 12:19:24 Key Pressed : r
+2026/07/18 12:19:24 0 and 20
+2026/07/18 12:19:25 Key Pressed : a
+2026/07/18 12:19:25 0 and 21
+2026/07/18 12:19:25 Key Pressed : j
+2026/07/18 12:19:25 0 and 22
+2026/07/18 12:19:25 Key Pressed :  
+2026/07/18 12:19:25 0 and 23
+2026/07/18 12:19:26 Enter Pressed
+2026/07/18 12:19:27 Key Pressed : t
+2026/07/18 12:19:27 1 and 0
+2026/07/18 12:19:27 Key Pressed : h
+2026/07/18 12:19:27 1 and 1
+2026/07/18 12:19:27 Key Pressed : i
+2026/07/18 12:19:27 1 and 2
+2026/07/18 12:19:27 Key Pressed : s
+2026/07/18 12:19:27 1 and 3
+2026/07/18 12:19:27 Key Pressed :  
+2026/07/18 12:19:27 1 and 4
+2026/07/18 12:19:27 Key Pressed : i
+2026/07/18 12:19:27 1 and 5
+2026/07/18 12:19:28 Key Pressed : s
+2026/07/18 12:19:28 1 and 6
+2026/07/18 12:19:28 Key Pressed :  
+2026/07/18 12:19:28 1 and 7
+2026/07/18 12:19:28 Key Pressed : m
+2026/07/18 12:19:28 1 and 8
+2026/07/18 12:19:28 Key Pressed : y
+2026/07/18 12:19:28 1 and 9
+2026/07/18 12:19:28 Key Pressed :  
+2026/07/18 12:19:28 1 and 10
+2026/07/18 12:19:30 Key Pressed : p
+2026/07/18 12:19:30 1 and 11
+2026/07/18 12:19:30 Key Pressed : r
+2026/07/18 12:19:30 1 and 12
+2026/07/18 12:19:30 Key Pressed : o
+2026/07/18 12:19:30 1 and 13
+2026/07/18 12:19:30 Key Pressed : j
+2026/07/18 12:19:30 1 and 14
+2026/07/18 12:19:30 Key Pressed : e
+2026/07/18 12:19:30 1 and 15
+2026/07/18 12:19:30 Key Pressed : c
+2026/07/18 12:19:30 1 and 16
+2026/07/18 12:19:31 Key Pressed : t
+2026/07/18 12:19:31 1 and 17
+2026/07/18 12:19:31 Key Pressed : '
+2026/07/18 12:19:31 1 and 18
+2026/07/18 12:19:31 Backspace Pressed
+2026/07/18 12:19:32 Enter Pressed
+2026/07/18 12:19:32 Key Pressed : h
+2026/07/18 12:19:32 2 and 0
+2026/07/18 12:19:33 Key Pressed : o
+2026/07/18 12:19:33 2 and 1
+2026/07/18 12:19:33 Key Pressed : w
+2026/07/18 12:19:33 2 and 2
+2026/07/18 12:19:33 Key Pressed :  
+2026/07/18 12:19:33 2 and 3
+2026/07/18 12:19:33 Key Pressed : a
+2026/07/18 12:19:33 2 and 4
+2026/07/18 12:19:33 Key Pressed : r
+2026/07/18 12:19:33 2 and 5
+2026/07/18 12:19:33 Key Pressed : e
+2026/07/18 12:19:33 2 and 6
+2026/07/18 12:19:33 Key Pressed :  
+2026/07/18 12:19:33 2 and 7
+2026/07/18 12:19:34 Key Pressed : y
+2026/07/18 12:19:34 2 and 8
+2026/07/18 12:19:34 Key Pressed : o
+2026/07/18 12:19:34 2 and 9
+2026/07/18 12:19:34 Key Pressed : u
+2026/07/18 12:19:34 2 and 10
+2026/07/18 12:19:34 Key Pressed :  
+2026/07/18 12:19:34 2 and 11
+2026/07/18 12:19:34 Key Pressed : f
+2026/07/18 12:19:34 2 and 12
+2026/07/18 12:19:35 Key Pressed : e
+2026/07/18 12:19:35 2 and 13
+2026/07/18 12:19:35 Key Pressed : e
+2026/07/18 12:19:35 2 and 14
+2026/07/18 12:19:35 Key Pressed : l
+2026/07/18 12:19:35 2 and 15
+2026/07/18 12:19:35 Key Pressed : i
+2026/07/18 12:19:35 2 and 16
+2026/07/18 12:19:35 Key Pressed : n
+2026/07/18 12:19:35 2 and 17
+2026/07/18 12:19:35 Key Pressed : g
+2026/07/18 12:19:35 2 and 18
+2026/07/18 12:19:35 Key Pressed :  
+2026/07/18 12:19:35 2 and 19
+2026/07/18 12:19:36 Key Pressed : r
+2026/07/18 12:19:36 2 and 20
+2026/07/18 12:19:36 Key Pressed : i
+2026/07/18 12:19:36 2 and 21
+2026/07/18 12:19:36 Key Pressed : g
+2026/07/18 12:19:36 2 and 22
+2026/07/18 12:19:36 Key Pressed : h
+2026/07/18 12:19:36 2 and 23
+2026/07/18 12:19:36 Key Pressed : t
+2026/07/18 12:19:36 2 and 24
+2026/07/18 12:19:37 Key Pressed :  
+2026/07/18 12:19:37 2 and 25
+2026/07/18 12:19:37 Enter Pressed
+2026/07/18 12:19:37 Key Pressed : m
+2026/07/18 12:19:37 3 and 0
+2026/07/18 12:19:38 Key Pressed : o
+2026/07/18 12:19:38 3 and 1
+2026/07/18 12:19:38 Backspace Pressed
+2026/07/18 12:19:38 Backspace Pressed
+2026/07/18 12:19:38 Key Pressed : n
+2026/07/18 12:19:38 3 and 0
+2026/07/18 12:19:39 Key Pressed : o
+2026/07/18 12:19:39 3 and 1
+2026/07/18 12:19:39 Key Pressed : w
+2026/07/18 12:19:39 3 and 2
+2026/07/18 12:19:39 Key Pressed : ?
+2026/07/18 12:19:39 3 and 3
+2026/07/18 12:19:40 UpKey Pressed
+2026/07/18 12:19:40 LeftKey Pressed
+2026/07/18 12:19:40 LeftKey Pressed
+2026/07/18 12:19:40 LeftKey Pressed
+2026/07/18 12:19:40 LeftKey Pressed
+2026/07/18 12:19:41 LeftKey Pressed
+2026/07/18 12:19:41 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:42 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:43 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 RightKey Pressed
+2026/07/18 12:19:44 Backspace Pressed
+2026/07/18 12:19:45 RightKey Pressed
+2026/07/18 12:19:45 RightKey Pressed
+2026/07/18 12:19:45 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:46 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:47 LeftKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:48 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:49 RightKey Pressed
+2026/07/18 12:19:50 DownKey Pressed
+2026/07/18 12:19:50 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 LeftKey Pressed
+2026/07/18 12:19:51 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 RightKey Pressed
+2026/07/18 12:19:52 DownKey Pressed
+2026/07/18 12:19:53 DownKey Pressed
+2026/07/18 12:19:53 DownKey Pressed
+2026/07/18 12:19:53 DownKey Pressed
+2026/07/18 12:19:54 DownKey Pressed
+2026/07/18 12:19:54 DownKey Pressed
+2026/07/18 12:19:54 DownKey Pressed
+2026/07/18 12:19:54 DownKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:55 UpKey Pressed
+2026/07/18 12:19:56 DownKey Pressed
+2026/07/18 12:19:56 DownKey Pressed
+2026/07/18 12:19:56 DownKey Pressed
+2026/07/18 12:19:56 DownKey Pressed
+2026/07/18 12:19:57 Key Pressed : h
+2026/07/18 12:19:57 9 and 0
+2026/07/18 12:19:57 Key Pressed : h
+2026/07/18 12:19:57 9 and 1
+2026/07/18 12:19:57 Key Pressed : f
+2026/07/18 12:19:57 9 and 2
+2026/07/18 12:19:57 Key Pressed : j
+2026/07/18 12:19:57 9 and 3
+2026/07/18 12:19:58 Key Pressed : j
+2026/07/18 12:19:58 9 and 4
+2026/07/18 12:19:58 UpKey Pressed
+2026/07/18 12:19:58 DownKey Pressed
+2026/07/18 12:19:58 UpKey Pressed
+2026/07/18 12:19:58 UpKey Pressed
+2026/07/18 12:19:59 UpKey Pressed
+2026/07/18 12:19:59 UpKey Pressed
+2026/07/18 12:19:59 UpKey Pressed
+2026/07/18 12:19:59 UpKey Pressed
+2026/07/18 12:36:36 Editor Started
+2026/07/18 12:36:36 Key Pressed : h
+2026/07/18 12:36:36 0 and 0
+2026/07/18 12:36:36 Key Pressed : e
+2026/07/18 12:36:36 0 and 1
+2026/07/18 12:36:37 Key Pressed : l
+2026/07/18 12:36:37 0 and 2
+2026/07/18 12:36:37 Key Pressed : l
+2026/07/18 12:36:37 0 and 3
+2026/07/18 12:36:37 Key Pressed : o
+2026/07/18 12:36:37 0 and 4
+2026/07/18 12:36:37 Key Pressed :  
+2026/07/18 12:36:37 0 and 5
+2026/07/18 12:36:37 Key Pressed : w
+2026/07/18 12:36:37 0 and 6
+2026/07/18 12:36:37 Key Pressed : o
+2026/07/18 12:36:37 0 and 7
+2026/07/18 12:36:38 Key Pressed : r
+2026/07/18 12:36:38 0 and 8
+2026/07/18 12:36:38 Key Pressed : l
+2026/07/18 12:36:38 0 and 9
+2026/07/18 12:36:38 Key Pressed : d
+2026/07/18 12:36:38 0 and 10
+2026/07/18 12:36:38 Enter Pressed
+2026/07/18 12:36:39 Key Pressed : m
+2026/07/18 12:36:39 1 and 0
+2026/07/18 12:36:39 Key Pressed : y
+2026/07/18 12:36:39 1 and 1
+2026/07/18 12:36:39 Key Pressed :  
+2026/07/18 12:36:39 1 and 2
+2026/07/18 12:36:39 Key Pressed : n
+2026/07/18 12:36:39 1 and 3
+2026/07/18 12:36:39 Key Pressed : a
+2026/07/18 12:36:39 1 and 4
+2026/07/18 12:36:40 Key Pressed : m
+2026/07/18 12:36:40 1 and 5
+2026/07/18 12:36:40 Key Pressed : e
+2026/07/18 12:36:40 1 and 6
+2026/07/18 12:36:40 Key Pressed :  
+2026/07/18 12:36:40 1 and 7
+2026/07/18 12:36:40 Key Pressed : i
+2026/07/18 12:36:40 1 and 8
+2026/07/18 12:36:40 Key Pressed : s
+2026/07/18 12:36:40 1 and 9
+2026/07/18 12:36:40 Key Pressed :  
+2026/07/18 12:36:40 1 and 10
+2026/07/18 12:36:41 Key Pressed : n
+2026/07/18 12:36:41 1 and 11
+2026/07/18 12:36:41 Key Pressed : e
+2026/07/18 12:36:41 1 and 12
+2026/07/18 12:36:41 Key Pressed : e
+2026/07/18 12:36:41 1 and 13
+2026/07/18 12:36:41 Key Pressed : r
+2026/07/18 12:36:41 1 and 14
+2026/07/18 12:36:42 Key Pressed : a
+2026/07/18 12:36:42 1 and 15
+2026/07/18 12:36:42 Key Pressed : j
+2026/07/18 12:36:42 1 and 16
+2026/07/18 12:36:42 Enter Pressed
+2026/07/18 12:36:43 Key Pressed : t
+2026/07/18 12:36:43 2 and 0
+2026/07/18 12:36:43 Key Pressed : h
+2026/07/18 12:36:43 2 and 1
+2026/07/18 12:36:43 Key Pressed : i
+2026/07/18 12:36:43 2 and 2
+2026/07/18 12:36:43 Key Pressed : s
+2026/07/18 12:36:43 2 and 3
+2026/07/18 12:36:44 Key Pressed :  
+2026/07/18 12:36:44 2 and 4
+2026/07/18 12:36:44 Key Pressed : i
+2026/07/18 12:36:44 2 and 5
+2026/07/18 12:36:44 Key Pressed : s
+2026/07/18 12:36:44 2 and 6
+2026/07/18 12:36:44 Key Pressed :  
+2026/07/18 12:36:44 2 and 7
+2026/07/18 12:36:44 Enter Pressed
+2026/07/18 12:36:45 Key Pressed : m
+2026/07/18 12:36:45 3 and 0
+2026/07/18 12:36:45 Key Pressed : y
+2026/07/18 12:36:45 3 and 1
+2026/07/18 12:36:45 Key Pressed :  
+2026/07/18 12:36:45 3 and 2
+2026/07/18 12:36:46 Key Pressed : o
+2026/07/18 12:36:46 3 and 3
+2026/07/18 12:36:46 Key Pressed : r
+2026/07/18 12:36:46 3 and 4
+2026/07/18 12:39:58 Backspace Pressed
+2026/07/18 12:39:58 Backspace Pressed
+2026/07/18 12:39:59 Key Pressed : p
+2026/07/18 12:39:59 3 and 3
+2026/07/18 12:39:59 Key Pressed : r
+2026/07/18 12:39:59 3 and 4
+2026/07/18 12:39:59 Key Pressed : o
+2026/07/18 12:39:59 3 and 5
+2026/07/18 12:39:59 Key Pressed : j
+2026/07/18 12:39:59 3 and 6
+2026/07/18 12:40:00 Key Pressed : e
+2026/07/18 12:40:00 3 and 7
+2026/07/18 12:40:00 Key Pressed : c
+2026/07/18 12:40:00 3 and 8
+2026/07/18 12:40:00 Key Pressed : t
+2026/07/18 12:40:00 3 and 9
+2026/07/18 12:40:01 LeftKey Pressed
+2026/07/18 12:40:01 LeftKey Pressed
+2026/07/18 12:40:01 LeftKey Pressed
+2026/07/18 12:40:01 LeftKey Pressed
+2026/07/18 12:40:02 RightKey Pressed
+2026/07/18 12:40:02 RightKey Pressed
+2026/07/18 12:40:02 UpKey Pressed
+2026/07/18 12:40:02 UpKey Pressed
+2026/07/18 12:40:03 UpKey Pressed
+2026/07/18 12:40:03 UpKey Pressed
+2026/07/18 12:40:03 UpKey Pressed
+2026/07/18 12:40:04 UpKey Pressed
+2026/07/18 12:40:04 LeftKey Pressed
+2026/07/18 12:40:04 LeftKey Pressed
+2026/07/18 12:40:05 LeftKey Pressed
+2026/07/18 12:40:05 UpKey Pressed
+2026/07/18 12:40:05 UpKey Pressed
+2026/07/18 12:40:05 LeftKey Pressed
+2026/07/18 12:40:06 LeftKey Pressed
+2026/07/18 12:40:06 LeftKey Pressed
+2026/07/18 12:40:06 LeftKey Pressed
+2026/07/18 12:40:06 LeftKey Pressed
+2026/07/18 12:40:06 LeftKey Pressed
+2026/07/18 12:40:06 UpKey Pressed
+2026/07/18 12:40:07 UpKey Pressed
+2026/07/18 12:40:07 UpKey Pressed
+2026/07/18 12:40:07 UpKey Pressed
+2026/07/18 12:40:07 DownKey Pressed
+2026/07/18 12:40:07 DownKey Pressed
+2026/07/18 12:40:08 UpKey Pressed
+2026/07/18 12:40:09 UpKey Pressed
+2026/07/18 12:40:09 UpKey Pressed
+2026/07/18 12:40:10 UpKey Pressed
+2026/07/18 12:40:10 UpKey Pressed
+2026/07/18 12:40:10 RightKey Pressed
+2026/07/18 12:40:11 DownKey Pressed
+2026/07/18 12:40:11 RightKey Pressed
+2026/07/18 12:40:11 RightKey Pressed
+2026/07/18 12:40:11 RightKey Pressed
+2026/07/18 12:40:11 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:12 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:13 Backspace Pressed
+2026/07/18 12:40:14 Key Pressed : i
+2026/07/18 12:40:14 1 and 8
+2026/07/18 12:40:14 Key Pressed : s
+2026/07/18 12:40:14 1 and 9
+2026/07/18 12:40:14 Key Pressed :  
+2026/07/18 12:40:14 1 and 10
+2026/07/18 12:40:15 Key Pressed : n
+2026/07/18 12:40:15 1 and 11
+2026/07/18 12:40:15 Key Pressed : e
+2026/07/18 12:40:15 1 and 12
+2026/07/18 12:40:15 Key Pressed : e
+2026/07/18 12:40:15 1 and 13
+2026/07/18 12:40:15 Key Pressed : r
+2026/07/18 12:40:15 1 and 14
+2026/07/18 12:40:16 Key Pressed : a
+2026/07/18 12:40:16 1 and 15
+2026/07/18 12:40:16 Key Pressed : j
+2026/07/18 12:40:16 1 and 16
+2026/07/18 12:40:16 UpKey Pressed
+2026/07/18 12:40:17 DownKey Pressed
+2026/07/18 12:40:18 UpKey Pressed
+2026/07/18 12:40:18 RightKey Pressed
+2026/07/18 12:40:19 DownKey Pressed
+2026/07/18 12:40:19 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 RightKey Pressed
+2026/07/18 12:40:20 Enter Pressed
+2026/07/18 12:40:21 Key Pressed : h
+2026/07/18 12:40:21 2 and 0
+2026/07/18 12:40:21 Key Pressed : e
+2026/07/18 12:40:21 2 and 1
+2026/07/18 12:40:21 Key Pressed : l
+2026/07/18 12:40:21 2 and 2
+2026/07/18 12:40:22 Key Pressed : o
+2026/07/18 12:40:22 2 and 3
+2026/07/18 12:40:22 Key Pressed :  
+2026/07/18 12:40:22 2 and 4
+2026/07/18 12:40:22 Key Pressed : w
+2026/07/18 12:40:22 2 and 5
+2026/07/18 12:40:22 Key Pressed : o
+2026/07/18 12:40:22 2 and 6
+2026/07/18 12:40:22 Key Pressed : r
+2026/07/18 12:40:22 2 and 7
+2026/07/18 12:40:23 Key Pressed : l
+2026/07/18 12:40:23 2 and 8
+2026/07/18 12:40:23 Key Pressed : d
+2026/07/18 12:40:23 2 and 9
+2026/07/18 12:40:24 UpKey Pressed
+2026/07/18 12:40:25 UpKey Pressed
+2026/07/18 12:40:25 UpKey Pressed
+2026/07/18 12:40:25 UpKey Pressed
+2026/07/18 12:40:25 UpKey Pressed
+2026/07/18 12:40:25 UpKey Pressed
+2026/07/18 12:40:26 UpKey Pressed
+2026/07/18 12:40:26 UpKey Pressed
+2026/07/18 12:40:26 UpKey Pressed
+2026/07/18 12:40:27 UpKey Pressed
+2026/07/18 12:40:27 DownKey Pressed
+2026/07/18 12:40:27 DownKey Pressed
+2026/07/18 12:40:27 DownKey Pressed
+2026/07/18 12:40:27 DownKey Pressed
+2026/07/18 12:40:27 UpKey Pressed
+2026/07/18 12:40:28 UpKey Pressed
+2026/07/18 12:40:28 UpKey Pressed
+2026/07/18 12:40:28 UpKey Pressed
+2026/07/18 12:40:28 DownKey Pressed
+2026/07/18 12:42:06 Editor Started
+2026/07/18 12:42:07 Key Pressed : h
+2026/07/18 12:42:07 0 and 0
+2026/07/18 12:42:07 Key Pressed : e
+2026/07/18 12:42:07 0 and 1
+2026/07/18 12:42:07 Key Pressed : l
+2026/07/18 12:42:07 0 and 2
+2026/07/18 12:42:08 Key Pressed : l
+2026/07/18 12:42:08 0 and 3
+2026/07/18 12:42:08 Key Pressed : l
+2026/07/18 12:42:08 0 and 4
+2026/07/18 12:42:08 Backspace Pressed
+2026/07/18 12:42:09 Key Pressed : o
+2026/07/18 12:42:09 0 and 4
+2026/07/18 12:42:09 Key Pressed :  
+2026/07/18 12:42:09 0 and 5
+2026/07/18 12:42:09 Key Pressed : w
+2026/07/18 12:42:09 0 and 6
+2026/07/18 12:42:10 Key Pressed : o
+2026/07/18 12:42:10 0 and 7
+2026/07/18 12:42:10 Key Pressed : r
+2026/07/18 12:42:10 0 and 8
+2026/07/18 12:42:10 Key Pressed : l
+2026/07/18 12:42:10 0 and 9
+2026/07/18 12:42:10 Key Pressed : d
+2026/07/18 12:42:10 0 and 10
+2026/07/18 12:42:10 Key Pressed :  
+2026/07/18 12:42:10 0 and 11
+2026/07/18 12:42:10 Enter Pressed
+2026/07/18 12:42:11 Key Pressed : m
+2026/07/18 12:42:11 1 and 0
+2026/07/18 12:42:11 Key Pressed : y
+2026/07/18 12:42:11 1 and 1
+2026/07/18 12:42:11 Key Pressed :  
+2026/07/18 12:42:11 1 and 2
+2026/07/18 12:42:12 Key Pressed : n
+2026/07/18 12:42:12 1 and 3
+2026/07/18 12:42:12 Key Pressed : a
+2026/07/18 12:42:12 1 and 4
+2026/07/18 12:42:12 Key Pressed : m
+2026/07/18 12:42:12 1 and 5
+2026/07/18 12:42:12 Key Pressed : e
+2026/07/18 12:42:12 1 and 6
+2026/07/18 12:42:12 Key Pressed :  
+2026/07/18 12:42:12 1 and 7
+2026/07/18 12:42:12 Key Pressed : i
+2026/07/18 12:42:12 1 and 8
+2026/07/18 12:42:12 Key Pressed : s
+2026/07/18 12:42:12 1 and 9
+2026/07/18 12:42:13 Key Pressed :  
+2026/07/18 12:42:13 1 and 10
+2026/07/18 12:42:13 Key Pressed : N
+2026/07/18 12:42:13 1 and 11
+2026/07/18 12:42:13 Key Pressed : e
+2026/07/18 12:42:13 1 and 12
+2026/07/18 12:42:14 Key Pressed : e
+2026/07/18 12:42:14 1 and 13
+2026/07/18 12:42:14 Key Pressed : r
+2026/07/18 12:42:14 1 and 14
+2026/07/18 12:42:14 Key Pressed : a
+2026/07/18 12:42:14 1 and 15
+2026/07/18 12:42:14 Key Pressed : j
+2026/07/18 12:42:14 1 and 16
+2026/07/18 12:42:14 Key Pressed :  
+2026/07/18 12:42:14 1 and 17
+2026/07/18 12:42:15 Enter Pressed
+2026/07/18 12:42:16 Key Pressed : t
+2026/07/18 12:42:16 2 and 0
+2026/07/18 12:42:16 Key Pressed : h
+2026/07/18 12:42:16 2 and 1
+2026/07/18 12:42:16 Key Pressed : i
+2026/07/18 12:42:16 2 and 2
+2026/07/18 12:42:17 Key Pressed : s
+2026/07/18 12:42:17 2 and 3
+2026/07/18 12:42:17 Enter Pressed
+2026/07/18 12:42:17 Key Pressed : i
+2026/07/18 12:42:17 3 and 0
+2026/07/18 12:42:17 Key Pressed : s
+2026/07/18 12:42:17 3 and 1
+2026/07/18 12:42:18 Key Pressed :  
+2026/07/18 12:42:18 3 and 2
+2026/07/18 12:42:18 Key Pressed : m
+2026/07/18 12:42:18 3 and 3
+2026/07/18 12:42:18 Key Pressed : y
+2026/07/18 12:42:18 3 and 4
+2026/07/18 12:42:18 Key Pressed :  
+2026/07/18 12:42:18 3 and 5
+2026/07/18 12:42:18 Key Pressed : p
+2026/07/18 12:42:18 3 and 6
+2026/07/18 12:42:19 Key Pressed : r
+2026/07/18 12:42:19 3 and 7
+2026/07/18 12:42:19 Key Pressed : o
+2026/07/18 12:42:19 3 and 8
+2026/07/18 12:42:19 Key Pressed : j
+2026/07/18 12:42:19 3 and 9
+2026/07/18 12:42:19 Key Pressed : e
+2026/07/18 12:42:19 3 and 10
+2026/07/18 12:42:19 Key Pressed : c
+2026/07/18 12:42:19 3 and 11
+2026/07/18 12:42:20 Key Pressed : t
+2026/07/18 12:42:20 3 and 12
+2026/07/18 12:42:20 UpKey Pressed
+2026/07/18 12:42:20 UpKey Pressed
+2026/07/18 12:42:21 RightKey Pressed
+2026/07/18 12:42:21 RightKey Pressed
+2026/07/18 12:42:21 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:22 RightKey Pressed
+2026/07/18 12:42:23 Backspace Pressed
+2026/07/18 12:42:23 LeftKey Pressed
+2026/07/18 12:42:24 RightKey Pressed
+2026/07/18 12:42:24 UpKey Pressed
+2026/07/18 12:42:25 DownKey Pressed
+2026/07/18 12:42:26 UpKey Pressed
+2026/07/18 12:42:26 DownKey Pressed
+2026/07/18 12:42:26 DownKey Pressed
+2026/07/18 12:42:27 DownKey Pressed
+2026/07/18 12:42:27 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:28 RightKey Pressed
+2026/07/18 12:42:29 UpKey Pressed
+2026/07/18 12:42:29 UpKey Pressed
+2026/07/18 12:42:30 DownKey Pressed
+2026/07/18 12:42:30 UpKey Pressed
+2026/07/18 12:42:30 UpKey Pressed
+2026/07/18 12:42:30 UpKey Pressed
+2026/07/18 12:42:31 DownKey Pressed
+2026/07/18 12:42:31 DownKey Pressed
+2026/07/18 12:42:31 DownKey Pressed
+2026/07/18 12:42:32 UpKey Pressed
+2026/07/18 12:42:32 UpKey Pressed
+2026/07/18 12:42:32 UpKey Pressed
+2026/07/18 12:42:32 DownKey Pressed
+2026/07/18 12:42:33 DownKey Pressed
+2026/07/18 12:42:33 DownKey Pressed
+2026/07/18 12:42:33 UpKey Pressed
+2026/07/18 12:42:33 UpKey Pressed
+2026/07/18 12:42:33 UpKey Pressed
+2026/07/18 12:42:34 DownKey Pressed
+2026/07/18 12:42:35 DownKey Pressed
+2026/07/18 12:42:35 UpKey Pressed
+2026/07/18 12:42:37 UpKey Pressed
+2026/07/18 12:42:38 DownKey Pressed
+2026/07/18 12:42:38 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 LeftKey Pressed
+2026/07/18 12:42:39 UpKey Pressed
+2026/07/18 12:42:41 DownKey Pressed
+2026/07/18 12:42:41 DownKey Pressed
+2026/07/18 12:42:42 DownKey Pressed
+2026/07/18 12:42:42 DownKey Pressed
+2026/07/18 12:42:43 UpKey Pressed
+2026/07/18 12:42:44 DownKey Pressed
+2026/07/18 12:42:44 RightKey Pressed
+2026/07/18 12:42:44 RightKey Pressed
+2026/07/18 12:42:44 RightKey Pressed
+2026/07/18 12:42:44 RightKey Pressed
+2026/07/18 12:42:44 RightKey Pressed
+2026/07/18 12:42:45 UpKey Pressed
+2026/07/18 12:42:45 DownKey Pressed
+2026/07/18 12:42:46 LeftKey Pressed
+2026/07/18 12:42:46 LeftKey Pressed
+2026/07/18 12:42:46 LeftKey Pressed
+2026/07/18 12:42:46 UpKey Pressed
+2026/07/18 12:42:47 DownKey Pressed
+2026/07/18 12:42:47 UpKey Pressed
+2026/07/18 12:42:47 UpKey Pressed
+2026/07/18 12:42:47 UpKey Pressed
+2026/07/18 12:42:48 UpKey Pressed
+2026/07/18 12:42:48 LeftKey Pressed
+2026/07/18 12:42:48 LeftKey Pressed
+2026/07/18 12:42:48 LeftKey Pressed
+2026/07/18 12:42:48 LeftKey Pressed
+2026/07/18 12:42:48 LeftKey Pressed
+2026/07/18 12:42:49 DownKey Pressed
+2026/07/18 12:42:50 UpKey Pressed
+2026/07/18 12:42:51 LeftKey Pressed
+2026/07/18 12:42:51 LeftKey Pressed
+2026/07/18 12:42:52 LeftKey Pressed
+2026/07/18 12:42:52 DownKey Pressed
+2026/07/18 12:42:52 DownKey Pressed
+2026/07/18 12:42:54 DownKey Pressed
+2026/07/18 12:42:55 UpKey Pressed
+2026/07/18 12:42:56 DownKey Pressed
+2026/07/18 12:42:56 RightKey Pressed
+2026/07/18 12:42:56 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:57 RightKey Pressed
+2026/07/18 12:42:58 RightKey Pressed
+2026/07/18 12:42:58 Enter Pressed
+2026/07/18 12:42:59 Key Pressed : h
+2026/07/18 12:42:59 4 and 0
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 1
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 2
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 3
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 4
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 5
+2026/07/18 12:42:59 Key Pressed : g
+2026/07/18 12:42:59 4 and 6
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 7
+2026/07/18 12:43:00 Key Pressed : g
+2026/07/18 12:43:00 4 and 8
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 9
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 10
+2026/07/18 12:43:00 Key Pressed : g
+2026/07/18 12:43:00 4 and 11
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 12
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 13
+2026/07/18 12:43:00 Key Pressed : g
+2026/07/18 12:43:00 4 and 14
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 15
+2026/07/18 12:43:00 Key Pressed : h
+2026/07/18 12:43:00 4 and 16
+2026/07/18 12:43:00 Key Pressed : g
+2026/07/18 12:43:00 4 and 17
+2026/07/18 12:43:01 Key Pressed : h
+2026/07/18 12:43:01 4 and 18
+2026/07/18 12:43:01 Key Pressed : g
+2026/07/18 12:43:01 4 and 19
+2026/07/18 12:43:01 Key Pressed : h
+2026/07/18 12:43:01 4 and 20
+2026/07/18 12:43:01 Key Pressed : h
+2026/07/18 12:43:01 4 and 21
+2026/07/18 12:43:01 Key Pressed : g
+2026/07/18 12:43:01 4 and 22
+2026/07/18 12:43:01 UpKey Pressed
+2026/07/18 12:43:02 LeftKey Pressed
+2026/07/18 12:43:02 LeftKey Pressed
+2026/07/18 12:43:03 LeftKey Pressed
+2026/07/18 12:43:03 LeftKey Pressed
+2026/07/18 12:43:04 DownKey Pressed
+2026/07/18 12:43:04 UpKey Pressed
+2026/07/18 12:43:05 LeftKey Pressed
+2026/07/18 12:43:05 LeftKey Pressed
+2026/07/18 12:43:05 LeftKey Pressed
+2026/07/18 12:43:05 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:06 LeftKey Pressed
+2026/07/18 12:43:07 UpKey Pressed
+2026/07/18 12:43:07 DownKey Pressed
+2026/07/18 12:43:08 LeftKey Pressed
+2026/07/18 12:43:08 LeftKey Pressed
+2026/07/18 12:43:08 LeftKey Pressed
+2026/07/18 12:43:09 UpKey Pressed
+2026/07/18 12:43:09 UpKey Pressed
+2026/07/18 12:43:09 UpKey Pressed
+2026/07/18 12:43:10 UpKey Pressed
+2026/07/18 12:43:10 DownKey Pressed
+2026/07/18 12:43:10 DownKey Pressed
+2026/07/18 12:43:10 DownKey Pressed
+2026/07/18 12:43:12 LeftKey Pressed
+2026/07/18 12:43:12 UpKey Pressed
+2026/07/18 12:43:12 UpKey Pressed
+2026/07/18 12:43:12 UpKey Pressed
+2026/07/18 12:43:13 UpKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:13 LeftKey Pressed
+2026/07/18 12:43:14 DownKey Pressed
+2026/07/18 12:43:14 UpKey Pressed
+2026/07/18 12:43:15 LeftKey Pressed
+2026/07/18 12:43:16 RightKey Pressed
+2026/07/18 12:43:16 Backspace Pressed
+2026/07/18 12:43:17 DownKey Pressed
+2026/07/18 12:43:17 UpKey Pressed
+2026/07/18 12:43:18 DownKey Pressed
+2026/07/18 12:43:18 UpKey Pressed
+2026/07/18 12:43:19 LeftKey Pressed
+2026/07/18 12:43:19 LeftKey Pressed
+2026/07/18 12:43:19 DownKey Pressed
+2026/07/18 12:43:20 UpKey Pressed
+2026/07/18 12:43:20 LeftKey Pressed
+2026/07/18 12:43:20 LeftKey Pressed
+2026/07/18 12:43:21 LeftKey Pressed
+2026/07/18 12:43:21 LeftKey Pressed
+2026/07/18 12:43:21 LeftKey Pressed
+2026/07/18 12:43:21 LeftKey Pressed
+2026/07/18 12:43:21 LeftKey Pressed
+2026/07/18 12:43:22 DownKey Pressed
+2026/07/18 12:43:22 LeftKey Pressed
+2026/07/18 12:43:22 LeftKey Pressed
+2026/07/18 12:43:23 DownKey Pressed
+2026/07/18 12:43:24 UpKey Pressed
+2026/07/18 12:43:24 LeftKey Pressed
+2026/07/18 12:43:24 LeftKey Pressed
+2026/07/18 12:43:25 LeftKey Pressed
+2026/07/18 12:43:25 DownKey Pressed
+2026/07/18 12:43:26 UpKey Pressed
+2026/07/18 12:43:26 LeftKey Pressed
+2026/07/18 12:43:26 LeftKey Pressed
+2026/07/18 12:43:26 LeftKey Pressed
+2026/07/18 12:43:27 DownKey Pressed
+2026/07/18 12:43:27 UpKey Pressed
+2026/07/18 12:43:27 LeftKey Pressed
+2026/07/18 12:43:27 LeftKey Pressed
+2026/07/18 12:43:28 LeftKey Pressed
+2026/07/18 12:43:28 DownKey Pressed
+2026/07/18 12:43:30 UpKey Pressed
+2026/07/18 12:43:30 LeftKey Pressed
+2026/07/18 12:43:30 LeftKey Pressed
+2026/07/18 12:43:30 LeftKey Pressed
+2026/07/18 12:43:31 DownKey Pressed
+2026/07/18 12:43:31 DownKey Pressed
+2026/07/18 12:43:32 DownKey Pressed
+2026/07/18 12:43:33 UpKey Pressed
+2026/07/18 12:46:09 Editor Started
+2026/07/18 12:46:10 Key Pressed : h
+2026/07/18 12:46:10 0 and 0
+2026/07/18 12:46:10 Key Pressed : e
+2026/07/18 12:46:10 0 and 1
+2026/07/18 12:46:10 Key Pressed : l
+2026/07/18 12:46:10 0 and 2
+2026/07/18 12:46:11 Key Pressed : l
+2026/07/18 12:46:11 0 and 3
+2026/07/18 12:46:11 Key Pressed : o
+2026/07/18 12:46:11 0 and 4
+2026/07/18 12:46:11 Key Pressed :  
+2026/07/18 12:46:11 0 and 5
+2026/07/18 12:46:11 Key Pressed : w
+2026/07/18 12:46:11 0 and 6
+2026/07/18 12:46:11 Key Pressed : o
+2026/07/18 12:46:11 0 and 7
+2026/07/18 12:46:11 Key Pressed : r
+2026/07/18 12:46:11 0 and 8
+2026/07/18 12:46:11 Key Pressed : l
+2026/07/18 12:46:11 0 and 9
+2026/07/18 12:46:12 Key Pressed : d
+2026/07/18 12:46:12 0 and 10
+2026/07/18 12:46:12 Enter Pressed
+2026/07/18 12:46:12 Key Pressed : m
+2026/07/18 12:46:12 1 and 0
+2026/07/18 12:46:12 Key Pressed : y
+2026/07/18 12:46:12 1 and 1
+2026/07/18 12:46:13 Key Pressed :  
+2026/07/18 12:46:13 1 and 2
+2026/07/18 12:46:13 Key Pressed : n
+2026/07/18 12:46:13 1 and 3
+2026/07/18 12:46:13 Key Pressed : a
+2026/07/18 12:46:13 1 and 4
+2026/07/18 12:46:14 Key Pressed : m
+2026/07/18 12:46:14 1 and 5
+2026/07/18 12:46:14 Key Pressed : e
+2026/07/18 12:46:14 1 and 6
+2026/07/18 12:46:14 Key Pressed :  
+2026/07/18 12:46:14 1 and 7
+2026/07/18 12:46:14 Key Pressed : s
+2026/07/18 12:46:14 1 and 8
+2026/07/18 12:46:15 Key Pressed : i
+2026/07/18 12:46:15 1 and 9
+2026/07/18 12:46:15 Backspace Pressed
+2026/07/18 12:46:15 Backspace Pressed
+2026/07/18 12:46:16 Key Pressed : i
+2026/07/18 12:46:16 1 and 8
+2026/07/18 12:46:16 Key Pressed : s
+2026/07/18 12:46:16 1 and 9
+2026/07/18 12:46:16 Key Pressed :  
+2026/07/18 12:46:16 1 and 10
+2026/07/18 12:46:16 Key Pressed : n
+2026/07/18 12:46:16 1 and 11
+2026/07/18 12:46:16 Key Pressed : e
+2026/07/18 12:46:16 1 and 12
+2026/07/18 12:46:17 Key Pressed : e
+2026/07/18 12:46:17 1 and 13
+2026/07/18 12:46:17 Key Pressed : r
+2026/07/18 12:46:17 1 and 14
+2026/07/18 12:46:17 Key Pressed : a
+2026/07/18 12:46:17 1 and 15
+2026/07/18 12:46:17 Key Pressed : j
+2026/07/18 12:46:17 1 and 16
+2026/07/18 12:46:17 Enter Pressed
+2026/07/18 12:46:18 Key Pressed : t
+2026/07/18 12:46:18 2 and 0
+2026/07/18 12:46:18 Key Pressed : h
+2026/07/18 12:46:18 2 and 1
+2026/07/18 12:46:18 Key Pressed : i
+2026/07/18 12:46:18 2 and 2
+2026/07/18 12:46:19 Key Pressed : s
+2026/07/18 12:46:19 2 and 3
+2026/07/18 12:46:19 Key Pressed :  
+2026/07/18 12:46:19 2 and 4
+2026/07/18 12:46:19 Key Pressed : i
+2026/07/18 12:46:19 2 and 5
+2026/07/18 12:46:19 Key Pressed : s
+2026/07/18 12:46:19 2 and 6
+2026/07/18 12:46:19 Key Pressed :  
+2026/07/18 12:46:19 2 and 7
+2026/07/18 12:46:19 Key Pressed : m
+2026/07/18 12:46:19 2 and 8
+2026/07/18 12:46:20 Key Pressed : y
+2026/07/18 12:46:20 2 and 9
+2026/07/18 12:46:20 Key Pressed :  
+2026/07/18 12:46:20 2 and 10
+2026/07/18 12:46:20 Key Pressed : p
+2026/07/18 12:46:20 2 and 11
+2026/07/18 12:46:20 Key Pressed : o
+2026/07/18 12:46:20 2 and 12
+2026/07/18 12:46:20 Key Pressed : d
+2026/07/18 12:46:20 2 and 13
+2026/07/18 12:46:21 Key Pressed : c
+2026/07/18 12:46:21 2 and 14
+2026/07/18 12:46:21 Key Pressed : o
+2026/07/18 12:46:21 2 and 15
+2026/07/18 12:46:22 Key Pressed : s
+2026/07/18 12:46:22 2 and 16
+2026/07/18 12:46:22 Backspace Pressed
+2026/07/18 12:46:22 Backspace Pressed
+2026/07/18 12:46:23 Backspace Pressed
+2026/07/18 12:46:24 Key Pressed : c
+2026/07/18 12:46:24 2 and 14
+2026/07/18 12:46:24 Key Pressed : a
+2026/07/18 12:46:24 2 and 15
+2026/07/18 12:46:24 Key Pressed : s
+2026/07/18 12:46:24 2 and 16
+2026/07/18 12:46:24 Key Pressed : t
+2026/07/18 12:46:24 2 and 17
+2026/07/18 12:46:25 Enter Pressed
+2026/07/18 12:46:26 Key Pressed : a
+2026/07/18 12:46:26 3 and 0
+2026/07/18 12:46:26 Key Pressed : n
+2026/07/18 12:46:26 3 and 1
+2026/07/18 12:46:26 Key Pressed : d
+2026/07/18 12:46:26 3 and 2
+2026/07/18 12:46:26 Key Pressed :  
+2026/07/18 12:46:26 3 and 3
+2026/07/18 12:46:27 Key Pressed : h
+2026/07/18 12:46:27 3 and 4
+2026/07/18 12:46:27 Key Pressed : d
+2026/07/18 12:46:27 3 and 5
+2026/07/18 12:46:27 Key Pressed : h
+2026/07/18 12:46:27 3 and 6
+2026/07/18 12:46:27 Key Pressed : d
+2026/07/18 12:46:27 3 and 7
+2026/07/18 12:46:28 Key Pressed : f
+2026/07/18 12:46:28 3 and 8
+2026/07/18 12:46:28 Key Pressed : j
+2026/07/18 12:46:28 3 and 9
+2026/07/18 12:46:28 Key Pressed : f
+2026/07/18 12:46:28 3 and 10
+2026/07/18 12:46:28 Key Pressed : j
+2026/07/18 12:46:28 3 and 11
+2026/07/18 12:46:28 UpKey Pressed
+2026/07/18 12:46:29 DownKey Pressed
+2026/07/18 12:46:29 UpKey Pressed
+2026/07/18 12:46:29 UpKey Pressed
+2026/07/18 12:46:30 UpKey Pressed
+2026/07/18 12:46:30 DownKey Pressed
+2026/07/18 12:46:31 DownKey Pressed
+2026/07/18 12:46:31 DownKey Pressed
+2026/07/18 12:46:31 DownKey Pressed
+2026/07/18 12:46:32 UpKey Pressed
+2026/07/18 12:46:32 UpKey Pressed
+2026/07/18 12:46:32 UpKey Pressed
+2026/07/18 12:46:33 LeftKey Pressed
+2026/07/18 12:46:33 LeftKey Pressed
+2026/07/18 12:46:33 LeftKey Pressed
+2026/07/18 12:46:33 LeftKey Pressed
+2026/07/18 12:46:33 DownKey Pressed
+2026/07/18 12:46:34 DownKey Pressed
+2026/07/18 12:46:35 DownKey Pressed
+2026/07/18 12:46:37 UpKey Pressed
+2026/07/18 12:46:37 RightKey Pressed
+2026/07/18 12:46:37 RightKey Pressed
+2026/07/18 12:46:37 RightKey Pressed
+2026/07/18 12:46:37 RightKey Pressed
+2026/07/18 12:46:38 RightKey Pressed
+2026/07/18 12:46:38 RightKey Pressed
+2026/07/18 12:46:38 RightKey Pressed
+2026/07/18 12:46:38 UpKey Pressed
+2026/07/18 12:46:39 DownKey Pressed
+2026/07/18 12:46:39 UpKey Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:40 Backspace Pressed
+2026/07/18 12:46:41 DownKey Pressed
+2026/07/18 12:46:41 RightKey Pressed
+2026/07/18 12:46:41 RightKey Pressed
+2026/07/18 12:46:41 RightKey Pressed
+2026/07/18 12:46:41 RightKey Pressed
+2026/07/18 12:46:42 RightKey Pressed
+2026/07/18 12:46:42 RightKey Pressed
+2026/07/18 12:46:42 RightKey Pressed
+2026/07/18 12:46:42 RightKey Pressed
+2026/07/18 12:46:42 UpKey Pressed
+2026/07/18 12:46:43 DownKey Pressed
+2026/07/18 12:46:44 DownKey Pressed
+2026/07/18 12:46:44 UpKey Pressed
+2026/07/18 12:46:44 UpKey Pressed
+2026/07/18 12:46:44 UpKey Pressed
+2026/07/18 12:46:45 UpKey Pressed
+2026/07/18 12:46:45 DownKey Pressed
+2026/07/18 12:46:45 DownKey Pressed
+2026/07/18 12:46:45 DownKey Pressed
+2026/07/18 12:46:45 DownKey Pressed
+2026/07/18 12:48:29 Editor Started
+2026/07/18 12:48:30 Key Pressed : h
+2026/07/18 12:48:30 0 and 0
+2026/07/18 12:48:30 Key Pressed : e
+2026/07/18 12:48:30 0 and 1
+2026/07/18 12:48:30 Key Pressed : l
+2026/07/18 12:48:30 0 and 2
+2026/07/18 12:48:30 Key Pressed : l
+2026/07/18 12:48:30 0 and 3
+2026/07/18 12:48:30 Key Pressed : o
+2026/07/18 12:48:30 0 and 4
+2026/07/18 12:48:31 Key Pressed :  
+2026/07/18 12:48:31 0 and 5
+2026/07/18 12:48:31 Key Pressed : w
+2026/07/18 12:48:31 0 and 6
+2026/07/18 12:48:31 Key Pressed : o
+2026/07/18 12:48:31 0 and 7
+2026/07/18 12:48:31 Key Pressed : r
+2026/07/18 12:48:31 0 and 8
+2026/07/18 12:48:31 Key Pressed : l
+2026/07/18 12:48:31 0 and 9
+2026/07/18 12:48:31 Key Pressed : d
+2026/07/18 12:48:31 0 and 10
+2026/07/18 12:48:31 Enter Pressed
+2026/07/18 12:48:32 Key Pressed : m
+2026/07/18 12:48:32 1 and 0
+2026/07/18 12:48:32 Key Pressed : y
+2026/07/18 12:48:32 1 and 1
+2026/07/18 12:48:32 Key Pressed :  
+2026/07/18 12:48:32 1 and 2
+2026/07/18 12:48:32 Key Pressed : n
+2026/07/18 12:48:32 1 and 3
+2026/07/18 12:48:32 Key Pressed : a
+2026/07/18 12:48:32 1 and 4
+2026/07/18 12:48:33 Key Pressed : m
+2026/07/18 12:48:33 1 and 5
+2026/07/18 12:48:33 Key Pressed : e
+2026/07/18 12:48:33 1 and 6
+2026/07/18 12:48:34 Key Pressed :  
+2026/07/18 12:48:34 1 and 7
+2026/07/18 12:48:34 Key Pressed : i
+2026/07/18 12:48:34 1 and 8
+2026/07/18 12:48:34 Key Pressed : s
+2026/07/18 12:48:34 1 and 9
+2026/07/18 12:48:34 Key Pressed :  
+2026/07/18 12:48:34 1 and 10
+2026/07/18 12:48:34 Key Pressed : N
+2026/07/18 12:48:34 1 and 11
+2026/07/18 12:48:35 Key Pressed : e
+2026/07/18 12:48:35 1 and 12
+2026/07/18 12:48:35 Key Pressed : e
+2026/07/18 12:48:35 1 and 13
+2026/07/18 12:48:35 Key Pressed : r
+2026/07/18 12:48:35 1 and 14
+2026/07/18 12:48:35 Key Pressed : a
+2026/07/18 12:48:35 1 and 15
+2026/07/18 12:48:36 Key Pressed : j
+2026/07/18 12:48:36 1 and 16
+2026/07/18 12:48:36 Key Pressed :  
+2026/07/18 12:48:36 1 and 17
+2026/07/18 12:48:37 Enter Pressed
+2026/07/18 12:48:37 Key Pressed : t
+2026/07/18 12:48:37 2 and 0
+2026/07/18 12:48:38 Key Pressed : h
+2026/07/18 12:48:38 2 and 1
+2026/07/18 12:48:38 Key Pressed : i
+2026/07/18 12:48:38 2 and 2
+2026/07/18 12:48:38 Key Pressed : s
+2026/07/18 12:48:38 2 and 3
+2026/07/18 12:48:38 Key Pressed :  
+2026/07/18 12:48:38 2 and 4
+2026/07/18 12:48:38 Key Pressed : i
+2026/07/18 12:48:38 2 and 5
+2026/07/18 12:48:38 Key Pressed : s
+2026/07/18 12:48:38 2 and 6
+2026/07/18 12:48:38 Key Pressed :  
+2026/07/18 12:48:38 2 and 7
+2026/07/18 12:48:39 Key Pressed : a
+2026/07/18 12:48:39 2 and 8
+2026/07/18 12:48:39 Key Pressed :  
+2026/07/18 12:48:39 2 and 9
+2026/07/18 12:48:39 Key Pressed : t
+2026/07/18 12:48:39 2 and 10
+2026/07/18 12:48:39 Key Pressed : e
+2026/07/18 12:48:39 2 and 11
+2026/07/18 12:48:39 Key Pressed : s
+2026/07/18 12:48:39 2 and 12
+2026/07/18 12:48:40 Key Pressed : t
+2026/07/18 12:48:40 2 and 13
+2026/07/18 12:48:40 Key Pressed :  
+2026/07/18 12:48:40 2 and 14
+2026/07/18 12:48:40 Key Pressed : p
+2026/07/18 12:48:40 2 and 15
+2026/07/18 12:48:40 Key Pressed : r
+2026/07/18 12:48:40 2 and 16
+2026/07/18 12:48:40 Key Pressed : o
+2026/07/18 12:48:40 2 and 17
+2026/07/18 12:48:41 Key Pressed : j
+2026/07/18 12:48:41 2 and 18
+2026/07/18 12:48:41 Key Pressed : e
+2026/07/18 12:48:41 2 and 19
+2026/07/18 12:48:41 Key Pressed : c
+2026/07/18 12:48:41 2 and 20
+2026/07/18 12:48:41 Key Pressed : t
+2026/07/18 12:48:41 2 and 21
+2026/07/18 12:48:42 Enter Pressed
+2026/07/18 12:48:42 Key Pressed : a
+2026/07/18 12:48:42 3 and 0
+2026/07/18 12:48:43 Key Pressed : l
+2026/07/18 12:48:43 3 and 1
+2026/07/18 12:48:43 Key Pressed : t
+2026/07/18 12:48:43 3 and 2
+2026/07/18 12:48:43 Key Pressed : h
+2026/07/18 12:48:43 3 and 3
+2026/07/18 12:48:43 Key Pressed : o
+2026/07/18 12:48:43 3 and 4
+2026/07/18 12:48:44 Key Pressed : u
+2026/07/18 12:48:44 3 and 5
+2026/07/18 12:48:44 Key Pressed : g
+2026/07/18 12:48:44 3 and 6
+2026/07/18 12:48:44 Key Pressed : h
+2026/07/18 12:48:44 3 and 7
+2026/07/18 12:48:44 Key Pressed : '
+2026/07/18 12:48:44 3 and 8
+2026/07/18 12:48:44 Enter Pressed
+2026/07/18 12:48:45 Key Pressed : e
+2026/07/18 12:48:45 4 and 0
+2026/07/18 12:48:46 Key Pressed : v
+2026/07/18 12:48:46 4 and 1
+2026/07/18 12:48:46 Key Pressed : e
+2026/07/18 12:48:46 4 and 2
+2026/07/18 12:48:46 Key Pressed : y
+2026/07/18 12:48:46 4 and 3
+2026/07/18 12:48:47 Key Pressed : t
+2026/07/18 12:48:47 4 and 4
+2026/07/18 12:48:47 Key Pressed : h
+2026/07/18 12:48:47 4 and 5
+2026/07/18 12:48:47 Key Pressed : i
+2026/07/18 12:48:47 4 and 6
+2026/07/18 12:48:47 Key Pressed : b
+2026/07/18 12:48:47 4 and 7
+2026/07/18 12:48:47 Key Pressed : g
+2026/07/18 12:48:47 4 and 8
+2026/07/18 12:48:48 Backspace Pressed
+2026/07/18 12:48:48 Backspace Pressed
+2026/07/18 12:48:48 Key Pressed : n
+2026/07/18 12:48:48 4 and 7
+2026/07/18 12:48:48 Key Pressed : b
+2026/07/18 12:48:48 4 and 8
+2026/07/18 12:48:48 Key Pressed : g
+2026/07/18 12:48:48 4 and 9
+2026/07/18 12:48:49 Backspace Pressed
+2026/07/18 12:48:49 Backspace Pressed
+2026/07/18 12:48:49 Key Pressed : g
+2026/07/18 12:48:49 4 and 8
+2026/07/18 12:48:50 Key Pressed :  
+2026/07/18 12:48:50 4 and 9
+2026/07/18 12:48:50 Key Pressed : i
+2026/07/18 12:48:50 4 and 10
+2026/07/18 12:48:50 Key Pressed : s
+2026/07/18 12:48:50 4 and 11
+2026/07/18 12:48:50 Key Pressed :  
+2026/07/18 12:48:50 4 and 12
+2026/07/18 12:48:50 Key Pressed : f
+2026/07/18 12:48:50 4 and 13
+2026/07/18 12:48:50 Key Pressed : o
+2026/07/18 12:48:50 4 and 14
+2026/07/18 12:48:50 Key Pressed : o
+2026/07/18 12:48:50 4 and 15
+2026/07/18 12:48:51 Backspace Pressed
+2026/07/18 12:48:51 Backspace Pressed
+2026/07/18 12:48:51 Key Pressed : g
+2026/07/18 12:48:51 4 and 14
+2026/07/18 12:48:51 Backspace Pressed
+2026/07/18 12:48:52 Backspace Pressed
+2026/07/18 12:48:52 Key Pressed : g
+2026/07/18 12:48:52 4 and 13
+2026/07/18 12:48:52 Key Pressed : o
+2026/07/18 12:48:52 4 and 14
+2026/07/18 12:48:52 Key Pressed : o
+2026/07/18 12:48:52 4 and 15
+2026/07/18 12:48:53 Key Pressed : d
+2026/07/18 12:48:53 4 and 16
+2026/07/18 12:48:53 Key Pressed :  
+2026/07/18 12:48:53 4 and 17
+2026/07/18 12:48:53 Key Pressed : n
+2026/07/18 12:48:53 4 and 18
+2026/07/18 12:48:54 Key Pressed : o
+2026/07/18 12:48:54 4 and 19
+2026/07/18 12:48:54 Key Pressed : w
+2026/07/18 12:48:54 4 and 20
+2026/07/18 12:48:55 UpKey Pressed
+2026/07/18 12:48:55 UpKey Pressed
+2026/07/18 12:48:56 DownKey Pressed
+2026/07/18 12:48:56 DownKey Pressed
+2026/07/18 12:48:56 DownKey Pressed
+2026/07/18 12:48:57 DownKey Pressed
+2026/07/18 12:48:57 DownKey Pressed
+2026/07/18 12:48:58 DownKey Pressed
+2026/07/18 12:48:58 DownKey Pressed
+2026/07/18 12:48:58 UpKey Pressed
+2026/07/18 12:48:58 UpKey Pressed
+2026/07/18 12:48:58 DownKey Pressed
+2026/07/18 12:48:59 DownKey Pressed
+2026/07/18 12:48:59 DownKey Pressed
+2026/07/18 12:48:59 DownKey Pressed
+2026/07/18 12:48:59 DownKey Pressed
+2026/07/18 12:49:00 DownKey Pressed
+2026/07/18 12:49:00 DownKey Pressed
+2026/07/18 12:49:00 DownKey Pressed
+2026/07/18 12:49:00 DownKey Pressed
+2026/07/18 12:49:00 DownKey Pressed
+2026/07/18 12:49:00 RightKey Pressed
+2026/07/18 12:49:01 RightKey Pressed
+2026/07/18 12:49:01 RightKey Pressed
+2026/07/18 12:49:01 DownKey Pressed
+2026/07/18 12:49:01 DownKey Pressed
+2026/07/18 12:49:01 DownKey Pressed
+2026/07/18 12:50:00 UpKey Pressed
+2026/07/18 12:50:02 Editor Started
+2026/07/18 12:50:03 Key Pressed : h
+2026/07/18 12:50:03 0 and 0
+2026/07/18 12:50:03 Key Pressed : e
+2026/07/18 12:50:03 0 and 1
+2026/07/18 12:50:03 Key Pressed : l
+2026/07/18 12:50:03 0 and 2
+2026/07/18 12:50:03 Key Pressed : l
+2026/07/18 12:50:03 0 and 3
+2026/07/18 12:50:03 Key Pressed : o
+2026/07/18 12:50:03 0 and 4
+2026/07/18 12:50:03 Key Pressed :  
+2026/07/18 12:50:03 0 and 5
+2026/07/18 12:50:03 Key Pressed : w
+2026/07/18 12:50:03 0 and 6
+2026/07/18 12:50:03 Key Pressed : o
+2026/07/18 12:50:03 0 and 7
+2026/07/18 12:50:04 Key Pressed : r
+2026/07/18 12:50:04 0 and 8
+2026/07/18 12:50:04 Key Pressed : l
+2026/07/18 12:50:04 0 and 9
+2026/07/18 12:50:04 Key Pressed : d
+2026/07/18 12:50:04 0 and 10
+2026/07/18 12:50:04 Enter Pressed
+2026/07/18 12:50:04 Key Pressed : m
+2026/07/18 12:50:04 1 and 0
+2026/07/18 12:50:05 Key Pressed : y
+2026/07/18 12:50:05 1 and 1
+2026/07/18 12:50:05 Key Pressed :  
+2026/07/18 12:50:05 1 and 2
+2026/07/18 12:50:05 Key Pressed : n
+2026/07/18 12:50:05 1 and 3
+2026/07/18 12:50:05 Key Pressed : a
+2026/07/18 12:50:05 1 and 4
+2026/07/18 12:50:06 Key Pressed : m
+2026/07/18 12:50:06 1 and 5
+2026/07/18 12:50:06 Key Pressed : e
+2026/07/18 12:50:06 1 and 6
+2026/07/18 12:50:06 Key Pressed :  
+2026/07/18 12:50:06 1 and 7
+2026/07/18 12:50:06 Key Pressed : i
+2026/07/18 12:50:06 1 and 8
+2026/07/18 12:50:06 Key Pressed : s
+2026/07/18 12:50:06 1 and 9
+2026/07/18 12:50:06 Key Pressed :  
+2026/07/18 12:50:06 1 and 10
+2026/07/18 12:50:07 Key Pressed : N
+2026/07/18 12:50:07 1 and 11
+2026/07/18 12:50:07 Key Pressed : e
+2026/07/18 12:50:07 1 and 12
+2026/07/18 12:50:07 Key Pressed : e
+2026/07/18 12:50:07 1 and 13
+2026/07/18 12:50:07 Key Pressed : r
+2026/07/18 12:50:07 1 and 14
+2026/07/18 12:50:08 Key Pressed : a
+2026/07/18 12:50:08 1 and 15
+2026/07/18 12:50:08 Key Pressed : j
+2026/07/18 12:50:08 1 and 16
+2026/07/18 12:50:08 Enter Pressed
+2026/07/18 12:50:08 Key Pressed : y
+2026/07/18 12:50:08 2 and 0
+2026/07/18 12:50:09 Backspace Pressed
+2026/07/18 12:50:09 Key Pressed : t
+2026/07/18 12:50:09 2 and 0
+2026/07/18 12:50:09 Key Pressed : h
+2026/07/18 12:50:09 2 and 1
+2026/07/18 12:50:09 Key Pressed : i
+2026/07/18 12:50:09 2 and 2
+2026/07/18 12:50:09 Key Pressed : s
+2026/07/18 12:50:09 2 and 3
+2026/07/18 12:50:10 Key Pressed :  
+2026/07/18 12:50:10 2 and 4
+2026/07/18 12:50:10 Key Pressed : i
+2026/07/18 12:50:10 2 and 5
+2026/07/18 12:50:10 Key Pressed : s
+2026/07/18 12:50:10 2 and 6
+2026/07/18 12:50:10 Key Pressed :  
+2026/07/18 12:50:10 2 and 7
+2026/07/18 12:50:10 Key Pressed : a
+2026/07/18 12:50:10 2 and 8
+2026/07/18 12:50:10 Key Pressed :  
+2026/07/18 12:50:10 2 and 9
+2026/07/18 12:50:11 Key Pressed : t
+2026/07/18 12:50:11 2 and 10
+2026/07/18 12:50:11 Key Pressed : e
+2026/07/18 12:50:11 2 and 11
+2026/07/18 12:50:12 Key Pressed : t
+2026/07/18 12:50:12 2 and 12
+2026/07/18 12:50:12 Backspace Pressed
+2026/07/18 12:50:12 Key Pressed : s
+2026/07/18 12:50:12 2 and 12
+2026/07/18 12:50:13 Key Pressed : t
+2026/07/18 12:50:13 2 and 13
+2026/07/18 12:50:13 Key Pressed :  
+2026/07/18 12:50:13 2 and 14
+2026/07/18 12:50:14 Key Pressed : p
+2026/07/18 12:50:14 2 and 15
+2026/07/18 12:50:15 Key Pressed : r
+2026/07/18 12:50:15 2 and 16
+2026/07/18 12:50:16 Key Pressed : o
+2026/07/18 12:50:16 2 and 17
+2026/07/18 12:50:16 Key Pressed : j
+2026/07/18 12:50:16 2 and 18
+2026/07/18 12:50:16 Key Pressed : e
+2026/07/18 12:50:16 2 and 19
+2026/07/18 12:50:16 Key Pressed : c
+2026/07/18 12:50:16 2 and 20
+2026/07/18 12:50:16 Key Pressed : t
+2026/07/18 12:50:16 2 and 21
+2026/07/18 12:50:17 Enter Pressed
+2026/07/18 12:50:18 Key Pressed : m
+2026/07/18 12:50:18 3 and 0
+2026/07/18 12:50:18 Backspace Pressed
+2026/07/18 12:50:18 Key Pressed : n
+2026/07/18 12:50:18 3 and 0
+2026/07/18 12:50:18 Key Pressed : o
+2026/07/18 12:50:18 3 and 1
+2026/07/18 12:50:19 Key Pressed : w
+2026/07/18 12:50:19 3 and 2
+2026/07/18 12:50:19 Key Pressed :  
+2026/07/18 12:50:19 3 and 3
+2026/07/18 12:50:19 Key Pressed : e
+2026/07/18 12:50:19 3 and 4
+2026/07/18 12:50:19 Key Pressed : v
+2026/07/18 12:50:19 3 and 5
+2026/07/18 12:50:19 Key Pressed : e
+2026/07/18 12:50:19 3 and 6
+2026/07/18 12:50:20 Key Pressed : r
+2026/07/18 12:50:20 3 and 7
+2026/07/18 12:50:20 Key Pressed : y
+2026/07/18 12:50:20 3 and 8
+2026/07/18 12:50:20 Key Pressed : t
+2026/07/18 12:50:20 3 and 9
+2026/07/18 12:50:20 Key Pressed : g
+2026/07/18 12:50:20 3 and 10
+2026/07/18 12:50:20 Key Pressed : h
+2026/07/18 12:50:20 3 and 11
+2026/07/18 12:50:20 Key Pressed : i
+2026/07/18 12:50:20 3 and 12
+2026/07/18 12:50:21 Key Pressed : n
+2026/07/18 12:50:21 3 and 13
+2026/07/18 12:50:21 Key Pressed : g
+2026/07/18 12:50:21 3 and 14
+2026/07/18 12:50:21 Enter Pressed
+2026/07/18 12:50:22 Key Pressed : o
+2026/07/18 12:50:22 4 and 0
+2026/07/18 12:50:22 Backspace Pressed
+2026/07/18 12:50:22 Key Pressed : i
+2026/07/18 12:50:22 4 and 0
+2026/07/18 12:50:23 Key Pressed : d
+2026/07/18 12:50:23 4 and 1
+2026/07/18 12:50:23 Key Pressed :  
+2026/07/18 12:50:23 4 and 2
+2026/07/18 12:50:23 Backspace Pressed
+2026/07/18 12:50:23 Backspace Pressed
+2026/07/18 12:50:24 Key Pressed : s
+2026/07/18 12:50:24 4 and 1
+2026/07/18 12:50:24 Key Pressed :  
+2026/07/18 12:50:24 4 and 2
+2026/07/18 12:50:25 Key Pressed : n
+2026/07/18 12:50:25 4 and 3
+2026/07/18 12:50:25 Backspace Pressed
+2026/07/18 12:50:26 Key Pressed : w
+2026/07/18 12:50:26 4 and 3
+2026/07/18 12:50:26 Key Pressed : o
+2026/07/18 12:50:26 4 and 4
+2026/07/18 12:50:26 Key Pressed : r
+2026/07/18 12:50:26 4 and 5
+2026/07/18 12:50:26 Key Pressed : k
+2026/07/18 12:50:26 4 and 6
+2026/07/18 12:50:27 Key Pressed : i
+2026/07/18 12:50:27 4 and 7
+2026/07/18 12:50:27 Key Pressed : n
+2026/07/18 12:50:27 4 and 8
+2026/07/18 12:50:27 Key Pressed : f
+2026/07/18 12:50:27 4 and 9
+2026/07/18 12:50:28 Backspace Pressed
+2026/07/18 12:50:28 Key Pressed : g
+2026/07/18 12:50:28 4 and 9
+2026/07/18 12:50:28 Key Pressed :  
+2026/07/18 12:50:28 4 and 10
+2026/07/18 12:50:29 Key Pressed : f
+2026/07/18 12:50:29 4 and 11
+2026/07/18 12:50:29 Key Pressed : i
+2026/07/18 12:50:29 4 and 12
+2026/07/18 12:50:29 Key Pressed : n
+2026/07/18 12:50:29 4 and 13
+2026/07/18 12:50:29 Key Pressed : e
+2026/07/18 12:50:29 4 and 14
+2026/07/18 12:50:29 Key Pressed :  
+2026/07/18 12:50:29 4 and 15
+2026/07/18 12:50:30 Key Pressed : h
+2026/07/18 12:50:30 4 and 16
+2026/07/18 12:50:30 Backspace Pressed
+2026/07/18 12:50:31 UpKey Pressed
+2026/07/18 12:50:32 DownKey Pressed
+2026/07/18 12:50:32 LeftKey Pressed
+2026/07/18 12:50:32 LeftKey Pressed
+2026/07/18 12:50:33 RightKey Pressed
+2026/07/18 12:50:33 RightKey Pressed
+2026/07/18 12:50:33 Key Pressed : f
+2026/07/18 12:50:33 4 and 15
+2026/07/18 12:50:33 Key Pressed : h
+2026/07/18 12:50:33 4 and 16
+2026/07/18 12:50:33 Key Pressed : j
+2026/07/18 12:50:33 4 and 17
+2026/07/18 12:50:33 Key Pressed : f
+2026/07/18 12:50:33 4 and 18
+2026/07/18 12:50:34 Key Pressed : h
+2026/07/18 12:50:34 4 and 19
+2026/07/18 12:50:34 Key Pressed : f
+2026/07/18 12:50:34 4 and 20
+2026/07/18 12:50:34 Key Pressed : h
+2026/07/18 12:50:34 4 and 21
+2026/07/18 12:50:34 Key Pressed : f
+2026/07/18 12:50:34 4 and 22
+2026/07/18 12:50:34 UpKey Pressed
+2026/07/18 12:50:35 DownKey Pressed
+2026/07/18 12:50:35 UpKey Pressed
+2026/07/18 12:50:36 DownKey Pressed
+2026/07/18 12:50:36 UpKey Pressed
+2026/07/18 12:50:36 UpKey Pressed
+2026/07/18 12:50:37 UpKey Pressed
+2026/07/18 12:50:37 UpKey Pressed
+2026/07/18 12:50:38 DownKey Pressed
+2026/07/18 12:50:38 UpKey Pressed
+2026/07/18 12:50:39 DownKey Pressed
+2026/07/18 12:50:39 RightKey Pressed
+2026/07/18 12:50:39 RightKey Pressed
+2026/07/18 12:50:40 RightKey Pressed
+2026/07/18 12:50:40 RightKey Pressed
+2026/07/18 12:50:41 RightKey Pressed
+2026/07/18 12:50:41 RightKey Pressed
+2026/07/18 12:50:41 DownKey Pressed
+2026/07/18 12:50:42 UpKey Pressed
+2026/07/18 12:50:42 DownKey Pressed
+2026/07/18 12:50:43 RightKey Pressed
+2026/07/18 12:50:43 RightKey Pressed
+2026/07/18 12:50:43 RightKey Pressed
+2026/07/18 12:50:43 RightKey Pressed
+2026/07/18 12:50:44 RightKey Pressed
+2026/07/18 12:50:44 DownKey Pressed
+2026/07/18 12:50:44 DownKey Pressed
+2026/07/18 12:50:45 UpKey Pressed
+2026/07/18 12:50:45 DownKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:46 RightKey Pressed
+2026/07/18 12:50:47 RightKey Pressed
+2026/07/18 12:50:47 RightKey Pressed
+2026/07/18 12:50:47 RightKey Pressed
+2026/07/18 12:50:47 RightKey Pressed
+2026/07/18 12:50:47 UpKey Pressed
