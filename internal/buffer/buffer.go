@@ -10,9 +10,14 @@ type Buffer struct {
 	lines []string
 }
 
-func InitBuffer() *Buffer {
+func InitBuffer(lines []string) *Buffer {
+	if len(lines) == 0 {
+		return &Buffer{
+			lines: make([]string, 1),
+		}
+	}
 	return &Buffer{
-		lines: make([]string, 1),
+		lines: lines,
 	}
 }
 

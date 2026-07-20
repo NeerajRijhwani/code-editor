@@ -23,12 +23,16 @@ func main() {
 	}()
 
 	log.Println("Editor Started")
-	editor, err := editor.InitEditor()
 
-	editor.Renderer.Show()
+	path := os.Args[1]
+	if path == "" {
+		log.Fatal("Path is required")
+	}
+	editor, err := editor.InitEditor(path)
 	if err != nil {
 		log.Fatal(err)
 	}
+	editor.Render()
 	editor.Run()
 
 }

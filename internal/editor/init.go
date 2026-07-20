@@ -1,6 +1,8 @@
 package editor
 
 import (
+	"log"
+
 	"github.com/NeerajRijhwani/code-editor/internal/buffer"
 	"github.com/NeerajRijhwani/code-editor/internal/cursor"
 	"github.com/NeerajRijhwani/code-editor/internal/renderer"
@@ -11,6 +13,9 @@ type Editor struct {
 	Buffer   *buffer.Buffer
 	Cursor   *cursor.Cursor
 	Renderer *renderer.Renderer
+
+	FilePath string
+	Modified bool
 	running  bool
 }
 
@@ -18,8 +23,12 @@ func quitEditor(e *Editor) {
 	e.Renderer.Quit()
 }
 
-func InitEditor() (*Editor, error) {
-	b := buffer.InitBuffer()
+func InitEditor(path string) (*Editor, error) {
+	b, err := OpenFile(path)
+	if err != nil {
+		log.Println("Cannot inialize buffer")
+		return nil, err
+	}
 	c := cursor.InitCursor()
 	r, err := renderer.InitRenderer()
 	if err != nil {
@@ -30,6 +39,8 @@ func InitEditor() (*Editor, error) {
 		Cursor:   c,
 		Renderer: r,
 		running:  true,
+		FilePath: path,
+		Modified: false,
 	}, nil
 }
 
@@ -43,7 +54,7 @@ func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
 	}
 }
 
-func (e *Editor) render() {
+func (e *Editor) Render() {
 	e.Renderer.Clear()
 
 	e.Renderer.DrawBorder(150, 150)
@@ -64,7 +75,7 @@ func (e *Editor) Run() {
 			e.Renderer.Sync()
 		case *tcell.EventKey:
 			e.HandleKey(ev)
-			e.render()
+			e.Render()
 			// case *tcell.EventMouse:
 			// 	e.HandleMouse(ev)
 		}

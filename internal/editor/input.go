@@ -15,6 +15,11 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 		fallthrough
 	case tcell.KeyCtrlQ:
 		e.running = false
+	case tcell.KeyCtrlS:
+		err := e.SaveFile()
+		if err != nil {
+			log.Printf("Unable to save file %v", err)
+		}
 	case tcell.KeyRune:
 		ch, _ := utf8.DecodeRuneInString(ev.Str())
 		e.Insert(ch)
