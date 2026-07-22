@@ -13,7 +13,8 @@ type Editor struct {
 	Buffer   *buffer.Buffer
 	Cursor   *cursor.Cursor
 	Renderer *renderer.Renderer
-
+	Width    int
+	Height   int
 	FilePath string
 	Modified bool
 	running  bool
@@ -41,6 +42,8 @@ func InitEditor(path string) (*Editor, error) {
 		running:  true,
 		FilePath: path,
 		Modified: false,
+		Height:   240,
+		Width:    240,
 	}, nil
 }
 
@@ -57,9 +60,10 @@ func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
 func (e *Editor) Render() {
 	e.Renderer.Clear()
 
-	e.Renderer.DrawBorder(150, 150)
+	e.Renderer.DrawBox(0, 0, e.Height, e.Width, e.Renderer.Theme.Background)
+	// e.Renderer.DrawBorder(170, 150)
 
-	e.Renderer.DrawBuffer(e.Buffer)
+	e.Renderer.DrawBuffer(e.Buffer, e.Cursor)
 
 	e.Renderer.DrawCursor(e.Cursor)
 
