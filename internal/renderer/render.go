@@ -20,10 +20,12 @@ type Theme struct {
 }
 
 type Renderer struct {
-	Screen  tcell.Screen
-	Theme   Theme
-	Xoffset int
-	Yoffset int
+	Screen    tcell.Screen
+	Theme     Theme
+	Xoffset   int
+	Yoffset   int
+	LastLine  int
+	FirstLine int
 }
 
 func (r *Renderer) Clear() {
@@ -32,6 +34,28 @@ func (r *Renderer) Clear() {
 
 func (r *Renderer) offset(x, y int) (int, int) {
 	return x + r.Xoffset, y + r.Yoffset
+}
+
+func (r *Renderer) DecreaseFirstLine() {
+	r.FirstLine--
+}
+func (r *Renderer) IncreaseFirstLine() {
+	r.FirstLine++
+}
+func (r *Renderer) DecreaseLastLine() {
+	r.LastLine--
+}
+func (r *Renderer) IncreaseLastLine() {
+	r.LastLine++
+}
+
+func (r *Renderer) UpdateLastLine(b *buffer.Buffer) {
+	count := b.LineCount()
+	if count < 30 {
+		r.LastLine = count
+	} else {
+		r.LastLine = r.FirstLine + r.FirstLine%30
+	}
 }
 
 func (r *Renderer) DrawBox(x1, y1, x2, y2 int, style tcell.Style) {
@@ -61,7 +85,7 @@ func (r *Renderer) DrawText(x, y int, text string, c *cursor.Cursor) {
 	x, y = r.offset(x, y)
 	cx, _ := c.Position()
 	for i, ch := range text {
-		if x == cx+r.Xoffset {
+		if x == cx+r.Xoffset-r.FirstLine {
 			r.Screen.SetContent(y+i, x, ch, nil, r.Theme.ActiveStyle)
 		} else {
 			r.Screen.SetContent(y+i, x, ch, nil, r.Theme.TextStyle)
@@ -83,21 +107,22 @@ func (r *Renderer) DrawBorder(width, height int) {
 
 func (r *Renderer) DrawCursor(c *cursor.Cursor) {
 	x, y := c.Position()
+	x -= r.FirstLine
 	x, y = r.offset(x, y)
 	r.Screen.ShowCursor(y, x)
 }
 
 func (r *Renderer) DrawBuffer(b *buffer.Buffer, c *cursor.Cursor) {
 	count := b.LineCount()
-	for i := range count {
-		line, _ := b.GetLine(i)
+	for i := range min(30, count-r.FirstLine) {
+		line, _ := b.GetLine(i + r.FirstLine)
 		r.DrawText(i, 0, line, c)
 		r.DrawlineNumber(i)
 	}
 }
 
 func (r *Renderer) DrawlineNumber(i int) {
-	num := strconv.Itoa(i)
+	num := strconv.Itoa(i + r.FirstLine)
 	for j, ch := range num {
 		r.Screen.SetContent(r.Yoffset+j-len(num)-1, i+r.Xoffset, ch, nil, r.Theme.LinenumStyle)
 	}
@@ -122,7 +147,7 @@ func (r *Renderer) Quit() {
 	}
 }
 
-func InitRenderer() (*Renderer, error) {
+func InitRenderer(b *buffer.Buffer) (*Renderer, error) {
 	defStyle := tcell.StyleDefault.Background(tcell.GetColor("#1E1E2E"))
 
 	s, err := tcell.NewScreen()
@@ -139,11 +164,7 @@ func InitRenderer() (*Renderer, error) {
 	s.EnableMouse()
 	s.EnablePaste()
 	s.Clear()
-	// cellstyle := tcell.StyleDefault.Background(color.Black)
-	// borderstyle := tcell.StyleDefault.Foreground(tcell.GetColor("#5C6370"))
-	// linenum_style := tcell.StyleDefault.Foreground(tcell.GetColor("#7F849C"))
-	// activeline_style := tcell.StyleDefault.Background(tcell.GetColor("#313244"))
-	//
+
 	return &Renderer{
 		Screen: s,
 		Theme: Theme{
@@ -170,8 +191,10 @@ func InitRenderer() (*Renderer, error) {
 				Background(tcell.GetColor("#45475A")).
 				Foreground(tcell.GetColor("#CDD6F4")),
 		},
-		Xoffset: 1,
-		Yoffset: 5,
+		Xoffset:   1,
+		Yoffset:   5,
+		LastLine:  min(30, b.LineCount()),
+		FirstLine: 0,
 	}, nil
 }
 

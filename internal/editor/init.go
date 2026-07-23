@@ -31,7 +31,7 @@ func InitEditor(path string) (*Editor, error) {
 		return nil, err
 	}
 	c := cursor.InitCursor()
-	r, err := renderer.InitRenderer()
+	r, err := renderer.InitRenderer(b)
 	if err != nil {
 		return nil, err
 	}

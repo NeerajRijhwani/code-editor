@@ -22,7 +22,7 @@ func InitBuffer(lines []string) *Buffer {
 }
 
 func (b *Buffer) GetLine(i int) (string, error) {
-	if i > len(b.lines) {
+	if i >= len(b.lines) {
 		return "", errors.New("Invalid Line")
 	}
 

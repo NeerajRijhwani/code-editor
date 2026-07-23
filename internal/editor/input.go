@@ -3,7 +3,6 @@ package editor
 import (
 	"fmt"
 	"log"
-	// "log"
 	"unicode/utf8"
 
 	"github.com/gdamore/tcell/v3"
@@ -46,7 +45,6 @@ func (e *Editor) Insert(key rune) {
 	e.Buffer.InsertRune(x, y, key)
 	e.Cursor.MoveRight()
 }
-
 func (e *Editor) Backspace() {
 	log.Println("Backspace Pressed")
 	x, y := e.Cursor.Position()
@@ -88,12 +86,21 @@ func (e *Editor) Delete() {
 
 func (e *Editor) Enter() {
 	log.Println("Enter Pressed")
+	count := e.Buffer.LineCount()
+	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
 	x, y := e.Cursor.Position()
 	err := e.Buffer.SplitLine(x, y)
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
+	if x == 30 {
+		e.Renderer.IncreaseFirstLine()
+	}
 	e.Cursor.SetCursor(x+1, 0)
+	screenRow := (x + 1) - e.Renderer.FirstLine
+	if screenRow >= 30 {
+		e.Renderer.FirstLine++
+	}
 }
 
 func (e *Editor) LeftKey() {
@@ -115,26 +122,35 @@ func (e *Editor) RightKey() {
 
 func (e *Editor) UpKey() {
 	log.Println("UpKey Pressed")
+	count := e.Buffer.LineCount()
 
+	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
 	x, y := e.Cursor.Position()
 	if x == 0 {
 		return
 	}
 	prevLen, _ := e.Buffer.LineLength(x - 1)
+
 	if y > prevLen {
 		e.Cursor.SetCursor(x, prevLen)
 	}
 	e.Cursor.MoveUp()
+	screenRow := (x - 1) - e.Renderer.FirstLine
+
+	if screenRow < 0 {
+		e.Renderer.FirstLine--
+	}
 
 }
 
 func (e *Editor) DownKey() {
 	log.Println("DownKey Pressed")
-
-	x, y := e.Cursor.Position()
 	count := e.Buffer.LineCount()
 
-	if x >= count-1 {
+	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
+	x, y := e.Cursor.Position()
+
+	if x == e.Buffer.LineCount()-1 {
 		return
 	}
 
@@ -143,4 +159,10 @@ func (e *Editor) DownKey() {
 		e.Cursor.SetCursor(x, nextLen)
 	}
 	e.Cursor.MoveDown()
+
+	screenRow := (x + 1) - e.Renderer.FirstLine
+
+	if screenRow >= 30 {
+		e.Renderer.FirstLine++
+	}
 }
