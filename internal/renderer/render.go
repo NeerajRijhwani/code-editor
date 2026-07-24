@@ -1,6 +1,7 @@
 package renderer
 
 import (
+	"log"
 	"strconv"
 
 	"github.com/NeerajRijhwani/code-editor/internal/buffer"
@@ -10,13 +11,14 @@ import (
 )
 
 type Theme struct {
-	Background   tcell.Style
-	TextStyle    tcell.Style
-	BorderStyle  tcell.Style
-	LinenumStyle tcell.Style
-	ActiveStyle  tcell.Style
-	CursorStyle  tcell.Style
-	StatusStyle  tcell.Style
+	Background     tcell.Style
+	TextStyle      tcell.Style
+	BorderStyle    tcell.Style
+	LinenumStyle   tcell.Style
+	ActiveStyle    tcell.Style
+	CursorStyle    tcell.CursorStyle
+	StatusStyle    tcell.Style
+	SelectionStyle tcell.Style
 }
 
 type Renderer struct {
@@ -26,6 +28,10 @@ type Renderer struct {
 	Yoffset   int
 	LastLine  int
 	FirstLine int
+}
+
+func (r *Renderer) SetClipboard(text string) {
+	r.Screen.SetClipboard([]byte(text))
 }
 
 func (r *Renderer) Clear() {
@@ -81,11 +87,14 @@ func (r *Renderer) DrawBox(x1, y1, x2, y2 int, style tcell.Style) {
 	// }
 }
 
-func (r *Renderer) DrawText(x, y int, text string, c *cursor.Cursor) {
+func (r *Renderer) DrawText(x, y int, text string, c *cursor.Cursor, s *cursor.Selection) {
 	x, y = r.offset(x, y)
 	cx, _ := c.Position()
 	for i, ch := range text {
-		if x == cx+r.Xoffset-r.FirstLine {
+		if s.Active && s.CheckWithinSelect(x-r.Xoffset, y+i-r.Yoffset) {
+			log.Print("select is working")
+			r.Screen.SetContent(y+i, x, ch, nil, r.Theme.SelectionStyle)
+		} else if x == cx+r.Xoffset-r.FirstLine {
 			r.Screen.SetContent(y+i, x, ch, nil, r.Theme.ActiveStyle)
 		} else {
 			r.Screen.SetContent(y+i, x, ch, nil, r.Theme.TextStyle)
@@ -112,11 +121,11 @@ func (r *Renderer) DrawCursor(c *cursor.Cursor) {
 	r.Screen.ShowCursor(y, x)
 }
 
-func (r *Renderer) DrawBuffer(b *buffer.Buffer, c *cursor.Cursor) {
+func (r *Renderer) DrawBuffer(b *buffer.Buffer, c *cursor.Cursor, s *cursor.Selection) {
 	count := b.LineCount()
 	for i := range min(30, count-r.FirstLine) {
 		line, _ := b.GetLine(i + r.FirstLine)
-		r.DrawText(i, 0, line, c)
+		r.DrawText(i, 0, line, c, s)
 		r.DrawlineNumber(i)
 	}
 }
@@ -147,6 +156,20 @@ func (r *Renderer) Quit() {
 	}
 }
 
+func (r *Renderer) CursorStyleSet(mode rune) {
+	switch mode {
+	case 'v':
+		fallthrough
+	case 'n':
+		r.Screen.SetCursorStyle(tcell.CursorStyleSteadyBlock)
+	case 'i':
+		r.Screen.SetCursorStyle(tcell.CursorStyleSteadyBar)
+	default:
+		r.Screen.SetCursorStyle(tcell.CursorStyleBlinkingBar)
+
+	}
+}
+
 func InitRenderer(b *buffer.Buffer) (*Renderer, error) {
 	defStyle := tcell.StyleDefault.Background(tcell.GetColor("#1E1E2E"))
 
@@ -161,6 +184,7 @@ func InitRenderer(b *buffer.Buffer) (*Renderer, error) {
 	}
 
 	s.SetStyle(defStyle)
+	s.SetCursorStyle(tcell.CursorStyleSteadyBlock)
 	s.EnableMouse()
 	s.EnablePaste()
 	s.Clear()
@@ -183,13 +207,12 @@ func InitRenderer(b *buffer.Buffer) (*Renderer, error) {
 			ActiveStyle: tcell.StyleDefault.
 				Background(tcell.GetColor("#37373b")).Foreground(tcell.GetColor("#f0f2f0")),
 
-			CursorStyle: tcell.StyleDefault.
-				Background(tcell.GetColor("#F5E0DC")).
-				Foreground(tcell.GetColor("#1E1E2E")),
-
+			CursorStyle: tcell.CursorStyleSteadyBlock,
 			StatusStyle: tcell.StyleDefault.
 				Background(tcell.GetColor("#45475A")).
 				Foreground(tcell.GetColor("#CDD6F4")),
+			SelectionStyle: tcell.StyleDefault.
+				Background(tcell.GetColor("#9c9a97")).Foreground(tcell.GetColor("#f0f2f0")),
 		},
 		Xoffset:   1,
 		Yoffset:   5,

@@ -3,11 +3,19 @@ package buffer
 import (
 	"errors"
 	"log"
-	// "fmt"
 )
 
 type Buffer struct {
 	lines []string
+}
+
+func (b *Buffer) GetSelectedText(x1, y1, x2, y2 int) string {
+	res := ""
+	return res
+}
+
+func (b *Buffer) InsertText(x1, y1 int, lines []string) {
+
 }
 
 func InitBuffer(lines []string) *Buffer {

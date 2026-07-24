@@ -9,34 +9,97 @@ import (
 )
 
 func (e *Editor) HandleKey(ev *tcell.EventKey) {
-	switch ev.Key() {
-	case tcell.KeyEscape:
-		fallthrough
-	case tcell.KeyCtrlQ:
-		e.running = false
-	case tcell.KeyCtrlS:
-		err := e.SaveFile()
-		if err != nil {
-			log.Printf("Unable to save file %v", err)
+	switch e.Mode {
+	case 'n':
+		switch ev.Key() {
+		case tcell.KeyCtrlQ:
+			e.running = false
+		case tcell.KeyCtrlS:
+			err := e.SaveFile()
+			if err != nil {
+				log.Printf("Unable to save file %v", err)
+			}
+		case tcell.KeyRight:
+			e.RightKey()
+		case tcell.KeyLeft:
+			e.LeftKey()
+		case tcell.KeyUp:
+			e.UpKey()
+		case tcell.KeyDown:
+			e.DownKey()
+		case tcell.KeyRune:
+			ch, _ := utf8.DecodeRuneInString(ev.Str())
+			switch ch {
+			case 'i':
+				log.Println("Inser Mode On")
+				e.Mode = 'i'
+			case 'v':
+				log.Println("Visual Mode On")
+				e.EnterVisualMode()
+				e.Mode = 'v'
+			}
 		}
-	case tcell.KeyRune:
-		ch, _ := utf8.DecodeRuneInString(ev.Str())
-		e.Insert(ch)
-	case tcell.KeyEnter:
-		e.Enter()
-	case tcell.KeyBackspace:
-		e.Backspace()
-	case tcell.KeyDelete:
-		e.Delete()
-	case tcell.KeyRight:
-		e.RightKey()
-	case tcell.KeyLeft:
-		e.LeftKey()
-	case tcell.KeyUp:
-		e.UpKey()
-	case tcell.KeyDown:
-		e.DownKey()
+	case 'i':
+		switch ev.Key() {
+		case tcell.KeyEscape:
+			fallthrough
+		case tcell.KeyCtrlQ:
+			log.Println("Normal Mode On")
+			e.Mode = 'n'
+		case tcell.KeyCtrlS:
+			err := e.SaveFile()
+			if err != nil {
+				log.Printf("Unable to save file %v", err)
+			}
+		case tcell.KeyRune:
+			ch, _ := utf8.DecodeRuneInString(ev.Str())
+			e.Insert(ch)
+		case tcell.KeyEnter:
+			e.Enter()
+		case tcell.KeyBackspace:
+			e.Backspace()
+		case tcell.KeyDelete:
+			e.Delete()
+		case tcell.KeyRight:
+			e.RightKey()
+		case tcell.KeyLeft:
+			e.LeftKey()
+		case tcell.KeyUp:
+			e.UpKey()
+		case tcell.KeyDown:
+			e.DownKey()
+		}
+	case 'v':
+		x1, y1, x2, y2 := e.Select.Position()
+		log.Printf("start %d, %d and end %d , %d", x1, y1, x2, y2)
+		switch ev.Key() {
+		case tcell.KeyEscape:
+			log.Println("Normal Mode On")
+			e.Select.Reset()
+			e.Mode = 'n'
+		case tcell.KeyRight:
+			e.RightKey()
+		case tcell.KeyLeft:
+			e.LeftKey()
+		case tcell.KeyUp:
+			e.UpKey()
+		case tcell.KeyDown:
+			e.DownKey()
+		case tcell.KeyRune:
+			ch, _ := utf8.DecodeRuneInString(ev.Str())
+			if ch == 'y' {
+				text := e.Buffer.GetSelectedText(e.Select.Position())
+				e.Renderer.SetClipboard(text)
+			}
+		}
 	}
+}
+
+func (e *Editor) EnterVisualMode() {
+	x, y := e.Cursor.Position()
+	e.Select.Active = true
+	e.Select.SetStartCoord(x, y)
+	e.Select.SetEndCoord(x, y)
 }
 
 func (e *Editor) Insert(key rune) {
@@ -86,8 +149,6 @@ func (e *Editor) Delete() {
 
 func (e *Editor) Enter() {
 	log.Println("Enter Pressed")
-	count := e.Buffer.LineCount()
-	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
 	x, y := e.Cursor.Position()
 	err := e.Buffer.SplitLine(x, y)
 	if err != nil {
@@ -109,6 +170,10 @@ func (e *Editor) LeftKey() {
 	if y != 0 {
 		e.Cursor.MoveLeft()
 	}
+	if e.Select.Active {
+		currx, curry := e.Cursor.Position()
+		e.Select.SetEndCoord(currx, curry)
+	}
 }
 
 func (e *Editor) RightKey() {
@@ -118,13 +183,15 @@ func (e *Editor) RightKey() {
 	if y != length {
 		e.Cursor.MoveRight()
 	}
+	if e.Select.Active {
+		currx, curry := e.Cursor.Position()
+		e.Select.SetEndCoord(currx, curry)
+	}
 }
 
 func (e *Editor) UpKey() {
 	log.Println("UpKey Pressed")
-	count := e.Buffer.LineCount()
 
-	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
 	x, y := e.Cursor.Position()
 	if x == 0 {
 		return
@@ -140,14 +207,16 @@ func (e *Editor) UpKey() {
 	if screenRow < 0 {
 		e.Renderer.FirstLine--
 	}
+	if e.Select.Active {
+		currx, curry := e.Cursor.Position()
+		e.Select.SetEndCoord(currx, curry)
+	}
 
 }
 
 func (e *Editor) DownKey() {
 	log.Println("DownKey Pressed")
-	count := e.Buffer.LineCount()
 
-	log.Printf("value of firstline %d lastline %d", e.Renderer.FirstLine, count-e.Renderer.FirstLine)
 	x, y := e.Cursor.Position()
 
 	if x == e.Buffer.LineCount()-1 {
@@ -164,5 +233,9 @@ func (e *Editor) DownKey() {
 
 	if screenRow >= 30 {
 		e.Renderer.FirstLine++
+	}
+	if e.Select.Active {
+		currx, curry := e.Cursor.Position()
+		e.Select.SetEndCoord(currx, curry)
 	}
 }

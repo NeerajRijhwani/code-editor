@@ -13,6 +13,8 @@ type Editor struct {
 	Buffer   *buffer.Buffer
 	Cursor   *cursor.Cursor
 	Renderer *renderer.Renderer
+	Select   *cursor.Selection
+	Mode     rune
 	Width    int
 	Height   int
 	FilePath string
@@ -32,6 +34,7 @@ func InitEditor(path string) (*Editor, error) {
 	}
 	c := cursor.InitCursor()
 	r, err := renderer.InitRenderer(b)
+	s := cursor.InitSelect()
 	if err != nil {
 		return nil, err
 	}
@@ -39,6 +42,8 @@ func InitEditor(path string) (*Editor, error) {
 		Buffer:   b,
 		Cursor:   c,
 		Renderer: r,
+		Select:   s,
+		Mode:     'n',
 		running:  true,
 		FilePath: path,
 		Modified: false,
@@ -60,12 +65,17 @@ func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
 func (e *Editor) Render() {
 	e.Renderer.Clear()
 
+	// Render Background
 	e.Renderer.DrawBox(0, 0, e.Height, e.Width, e.Renderer.Theme.Background)
 	// e.Renderer.DrawBorder(170, 150)
 
-	e.Renderer.DrawBuffer(e.Buffer, e.Cursor)
+	e.Renderer.DrawBuffer(e.Buffer, e.Cursor, e.Select)
+
+	e.Renderer.CursorStyleSet(e.Mode)
 
 	e.Renderer.DrawCursor(e.Cursor)
+
+	// Render Selection
 
 	e.Renderer.Show()
 }
