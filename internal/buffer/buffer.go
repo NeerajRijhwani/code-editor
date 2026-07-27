@@ -9,13 +9,46 @@ type Buffer struct {
 	lines []string
 }
 
-func (b *Buffer) GetSelectedText(x1, y1, x2, y2 int) string {
-	res := ""
-	return res
+func (b *Buffer) DeleteSelectedText(x1, y1, x2, y2 int) {
+	if x1 > x2 {
+		x1, x2 = x2, x1
+		y1, y2 = y2, y1
+	}
+	if x1 == x2 {
+		if y1 > y2 {
+			y1, y2 = y2, y1
+		}
+		b.lines[x1] = b.lines[x1][:y1] + b.lines[x1][y2+1:]
+	}
+
+	b.lines[x1] = b.lines[x1][:y1]
+
+	if x1+1 != x2 {
+		b.lines = append(b.lines[:x1+1], b.lines[x2:]...)
+	}
+	b.lines[x2] = b.lines[x2][y2:]
+
 }
 
-func (b *Buffer) InsertText(x1, y1 int, lines []string) {
+func (b *Buffer) GetSelectedText(x1, y1, x2, y2 int) string {
+	res := ""
 
+	if x1 > x2 {
+		x1, x2 = x2, x1
+		y1, y2 = y2, y1
+	}
+	if x1 == x2 {
+		if y1 > y2 {
+			y1, y2 = y2, y1
+		}
+		return b.lines[x1][y1:y2]
+	}
+	res += b.lines[x1][y1:] + string('\n')
+	for i := x1 + 1; i < x2; i++ {
+		res += b.lines[i] + string('\n')
+	}
+	res += b.lines[x2][:y2]
+	return res
 }
 
 func InitBuffer(lines []string) *Buffer {

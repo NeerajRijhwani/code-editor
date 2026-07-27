@@ -31,7 +31,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 			ch, _ := utf8.DecodeRuneInString(ev.Str())
 			switch ch {
 			case 'i':
-				log.Println("Inser Mode On")
+				log.Println("Insert Mode On")
 				e.Mode = 'i'
 			case 'v':
 				log.Println("Visual Mode On")
@@ -40,6 +40,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 			}
 		}
 	case 'i':
+		log.Printf("key name pressed : %s ", ev.Name())
 		switch ev.Key() {
 		case tcell.KeyEscape:
 			fallthrough
@@ -54,7 +55,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 		case tcell.KeyRune:
 			ch, _ := utf8.DecodeRuneInString(ev.Str())
 			e.Insert(ch)
-		case tcell.KeyEnter:
+		case tcell.KeyEnter, tcell.KeyCtrlJ:
 			e.Enter()
 		case tcell.KeyBackspace:
 			e.Backspace()
@@ -87,9 +88,16 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 			e.DownKey()
 		case tcell.KeyRune:
 			ch, _ := utf8.DecodeRuneInString(ev.Str())
-			if ch == 'y' {
+			switch ch {
+			case 'y':
 				text := e.Buffer.GetSelectedText(e.Select.Position())
 				e.Renderer.SetClipboard(text)
+				e.Select.Reset()
+				e.Mode = 'n'
+			case 'd':
+				e.Buffer.DeleteSelectedText(e.Select.Position())
+				e.Select.Reset()
+				e.Mode = 'n'
 			}
 		}
 	}
@@ -103,7 +111,6 @@ func (e *Editor) EnterVisualMode() {
 }
 
 func (e *Editor) Insert(key rune) {
-	log.Printf("Key Pressed : %c", key)
 	x, y := e.Cursor.Position()
 	e.Buffer.InsertRune(x, y, key)
 	e.Cursor.MoveRight()
