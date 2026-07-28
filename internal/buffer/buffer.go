@@ -10,23 +10,24 @@ type Buffer struct {
 }
 
 func (b *Buffer) DeleteSelectedText(x1, y1, x2, y2 int) {
-	if x1 > x2 {
+	if x1 > x2 || (x1 == x2 && y1 > y2) {
 		x1, x2 = x2, x1
 		y1, y2 = y2, y1
 	}
+
 	if x1 == x2 {
-		if y1 > y2 {
-			y1, y2 = y2, y1
-		}
-		b.lines[x1] = b.lines[x1][:y1] + b.lines[x1][y2+1:]
+		line := b.lines[x1]
+		b.lines[x1] = line[:y1] + line[y2:]
+		return
 	}
 
-	b.lines[x1] = b.lines[x1][:y1]
+	first := b.lines[x1][:y1]
 
-	if x1+1 != x2 {
-		b.lines = append(b.lines[:x1+1], b.lines[x2:]...)
-	}
-	b.lines[x2] = b.lines[x2][y2:]
+	last := b.lines[x2][y2:]
+
+	b.lines[x1] = first + last
+
+	b.lines = append(b.lines[:x1+1], b.lines[x2+1:]...)
 
 }
 

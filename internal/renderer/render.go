@@ -87,6 +87,13 @@ func (r *Renderer) DrawBox(x1, y1, x2, y2 int, style tcell.Style) {
 	// }
 }
 
+func (r *Renderer) SetActivelinestyle(x, width int) {
+	offsetx, offsety := r.offset(0, 0)
+	for i := offsety; i < width; i++ {
+		r.Screen.SetContent(i, x+offsetx, ' ', nil, r.Theme.ActiveStyle)
+	}
+}
+
 func (r *Renderer) DrawText(x, y int, text string, c *cursor.Cursor, s *cursor.Selection) {
 	x, y = r.offset(x, y)
 	cx, _ := c.Position()

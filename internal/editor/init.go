@@ -68,6 +68,8 @@ func (e *Editor) Render() {
 	// Render Background
 	e.Renderer.DrawBox(0, 0, e.Height, e.Width, e.Renderer.Theme.Background)
 	// e.Renderer.DrawBorder(170, 150)
+	x, _ := e.Cursor.Position()
+	e.Renderer.SetActivelinestyle(x, e.Width)
 
 	e.Renderer.DrawBuffer(e.Buffer, e.Cursor, e.Select)
 
