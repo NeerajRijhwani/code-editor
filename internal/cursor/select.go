@@ -33,16 +33,29 @@ func (s *Selection) Position() (int, int, int, int) {
 }
 
 func (s *Selection) CheckWithinSelect(x int, y int) bool {
-	if x > s.StartX && x < s.EndX {
+	sX, sY, eX, eY := s.Position()
+	if sX > eX {
+		sX, eX = eX, sX
+		sY, eY = eY, sY
+
+	}
+	if x > sX && x < eX {
 		return true
-	} else if x == s.StartX {
-		if y >= s.StartY {
+	} else if x == sX && x == eX {
+		if y >= sY && y <= eY {
 			return true
 		} else {
 			return false
 		}
-	} else if x == s.EndX {
-		if y <= s.EndY {
+
+	} else if x == sX {
+		if y >= sY {
+			return true
+		} else {
+			return false
+		}
+	} else if x == eX {
+		if y <= eY {
 			return true
 		} else {
 			return false

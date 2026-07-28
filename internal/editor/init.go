@@ -33,7 +33,7 @@ func InitEditor(path string) (*Editor, error) {
 		return nil, err
 	}
 	c := cursor.InitCursor()
-	r, err := renderer.InitRenderer(b)
+	r, err := renderer.InitRenderer()
 	s := cursor.InitSelect()
 	if err != nil {
 		return nil, err
@@ -62,24 +62,58 @@ func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
 	}
 }
 
-func (e *Editor) Render() {
+func (e *Editor) drawBuffer() {
+
+	count := e.Buffer.LineCount()
+	cx, _ := e.Cursor.Position()
+	for i := range min(30, count-e.Renderer.FirstLine) {
+		line, _ := e.Buffer.GetLine(i + e.Renderer.FirstLine)
+
+		for j, ch := range line {
+			if e.Select.Active && e.Select.CheckWithinSelect(i, j) {
+				e.Renderer.DrawCell(i, j, ch, 's')
+			} else if i == cx-e.Renderer.FirstLine {
+				e.Renderer.DrawCell(i, j, ch, 'a')
+			} else {
+				e.Renderer.DrawCell(i, j, ch, 'n')
+			}
+		}
+
+		e.Renderer.DrawlineNumber(i)
+	}
+
+}
+
+func (e *Editor) drawCursor() {
+	x, y := e.Cursor.Position()
+	e.Renderer.DrawCursor(x, y)
+}
+
+func (e *Editor) reset() {
 	e.Renderer.Clear()
 
 	// Render Background
 	e.Renderer.DrawBox(0, 0, e.Height, e.Width, e.Renderer.Theme.Background)
-	// e.Renderer.DrawBorder(170, 150)
+
 	x, _ := e.Cursor.Position()
+	// Render ActiveLine
 	e.Renderer.SetActivelinestyle(x, e.Width)
 
-	e.Renderer.DrawBuffer(e.Buffer, e.Cursor, e.Select)
-
 	e.Renderer.CursorStyleSet(e.Mode)
+}
 
-	e.Renderer.DrawCursor(e.Cursor)
-
-	// Render Selection
-
+func (e *Editor) Update() {
 	e.Renderer.Show()
+}
+
+func (e *Editor) Render() {
+	e.reset()
+
+	e.drawBuffer()
+
+	e.drawCursor()
+
+	e.Update()
 }
 
 func (e *Editor) Run() {
