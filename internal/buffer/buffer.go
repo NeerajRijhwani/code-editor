@@ -9,7 +9,7 @@ type Buffer struct {
 	lines []string
 }
 
-func (b *Buffer) DeleteSelectedText(x1, y1, x2, y2 int) {
+func (b *Buffer) DeleteText(x1, y1, x2, y2 int) {
 	if x1 > x2 || (x1 == x2 && y1 > y2) {
 		x1, x2 = x2, x1
 		y1, y2 = y2, y1
@@ -91,6 +91,17 @@ func (b *Buffer) InsertRune(row int, col int, ch rune) error {
 
 	b.lines[row] = b.lines[row][:col] + string(ch) + b.lines[row][col:]
 
+	return nil
+}
+
+func (b *Buffer) InsertText(text string, x, y int) error {
+	if x >= len(b.lines) || x < 0 {
+		return errors.New("Row Inavlid")
+	}
+	if y < 0 || y > len(b.lines[x]) {
+		return errors.New("Col Inavlid")
+	}
+	b.lines[x] = b.lines[x][:y] + text + b.lines[x][y:]
 	return nil
 }
 

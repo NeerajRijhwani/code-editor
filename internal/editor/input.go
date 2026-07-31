@@ -96,7 +96,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 				e.Mode = 'n'
 			case 'd':
 				x1, y1, x2, y2 = e.Select.Position()
-				e.Buffer.DeleteSelectedText(x1, y1, x2, y2)
+				e.Buffer.DeleteText(x1, y1, x2, y2)
 				if x1 > x2 {
 					e.Cursor.SetCursor(x2, y2)
 				} else {
