@@ -14,6 +14,7 @@ type Editor struct {
 	Cursor   *cursor.Cursor
 	Renderer *renderer.Renderer
 	Select   *cursor.Selection
+	History  *buffer.Manager
 	Mode     rune
 	Width    int
 	Height   int
@@ -35,6 +36,7 @@ func InitEditor(path string) (*Editor, error) {
 	c := cursor.InitCursor()
 	r, err := renderer.InitRenderer()
 	s := cursor.InitSelect()
+	h := buffer.Init_Manager()
 	if err != nil {
 		return nil, err
 	}
@@ -43,6 +45,7 @@ func InitEditor(path string) (*Editor, error) {
 		Cursor:   c,
 		Renderer: r,
 		Select:   s,
+		History:  h,
 		Mode:     'n',
 		running:  true,
 		FilePath: path,

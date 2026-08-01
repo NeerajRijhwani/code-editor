@@ -30,6 +30,49 @@ type SplitLineCommand struct {
 	Start Position
 }
 
+func Init_InsertTextCommand(x1, x2, y1, y2 int, text string) *InsertTextCommand {
+	return &InsertTextCommand{
+		Start: Position{
+			Row: x1,
+			Col: y1,
+		},
+		End: Position{
+			Row: x2,
+			Col: y2,
+		},
+		Text: text,
+	}
+}
+func Init_DeleteTextCommand(x1, x2, y1, y2 int, text string) *DeleteTextCommand {
+	return &DeleteTextCommand{
+		Start: Position{
+			Row: x1,
+			Col: y1,
+		},
+		End: Position{
+			Row: x2,
+			Col: y2,
+		},
+		Text: text,
+	}
+}
+
+func Init_MergeLineCommand(x, y int) *MergeLineCommand {
+	return &MergeLineCommand{
+		Start: Position{
+			Row: x,
+			Col: y,
+		},
+	}
+}
+func Init_SplitLineCommand(x, y int) *SplitLineCommand {
+	return &SplitLineCommand{
+		Start: Position{
+			Row: x,
+			Col: y,
+		},
+	}
+}
 func (cmd *InsertTextCommand) Undo(b *Buffer) error {
 
 	x1 := cmd.Start.Row

@@ -2,10 +2,9 @@ package editor
 
 import (
 	"fmt"
+	"github.com/gdamore/tcell/v3"
 	"log"
 	"unicode/utf8"
-
-	"github.com/gdamore/tcell/v3"
 )
 
 func (e *Editor) HandleKey(ev *tcell.EventKey) {
@@ -37,7 +36,19 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 				log.Println("Visual Mode On")
 				e.EnterVisualMode()
 				e.Mode = 'v'
+			case 'u':
+				e.History.Execute(nil, e.Buffer, 'u')
+			case 'h':
+				e.LeftKey()
+			case 'j':
+				e.DownKey()
+			case 'k':
+				e.UpKey()
+			case 'l':
+				e.RightKey()
 			}
+		case tcell.KeyCtrlR:
+			e.History.Execute(nil, e.Buffer, 'r')
 		}
 	case 'i':
 		log.Printf("key name pressed : %s ", ev.Name())
@@ -90,23 +101,31 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 			ch, _ := utf8.DecodeRuneInString(ev.Str())
 			switch ch {
 			case 'y':
-				text := e.Buffer.GetSelectedText(e.Select.Position())
-				e.Renderer.SetClipboard(text)
-				e.Select.Reset()
-				e.Mode = 'n'
+				e.Yank()
 			case 'd':
-				x1, y1, x2, y2 = e.Select.Position()
-				e.Buffer.DeleteText(x1, y1, x2, y2)
-				if x1 > x2 {
-					e.Cursor.SetCursor(x2, y2)
-				} else {
-					e.Cursor.SetCursor(x1, y1)
-				}
-				e.Select.Reset()
-				e.Mode = 'n'
+				e.Cut()
 			}
 		}
 	}
+}
+
+func (e *Editor) Yank() {
+	text := e.Buffer.GetSelectedText(e.Select.Position())
+	e.Renderer.SetClipboard(text)
+	e.Select.Reset()
+	e.Mode = 'n'
+}
+
+func (e *Editor) Cut() {
+	x1, y1, x2, y2 := e.Select.Position()
+	e.Buffer.DeleteText(x1, y1, x2, y2)
+	if x1 > x2 {
+		e.Cursor.SetCursor(x2, y2)
+	} else {
+		e.Cursor.SetCursor(x1, y1)
+	}
+	e.Select.Reset()
+	e.Mode = 'n'
 }
 
 func (e *Editor) EnterVisualMode() {
