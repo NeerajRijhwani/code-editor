@@ -2,9 +2,11 @@ package editor
 
 import (
 	"fmt"
-	"github.com/gdamore/tcell/v3"
 	"log"
 	"unicode/utf8"
+
+	"github.com/NeerajRijhwani/code-editor/internal/buffer"
+	"github.com/gdamore/tcell/v3"
 )
 
 func (e *Editor) HandleKey(ev *tcell.EventKey) {
@@ -37,6 +39,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 				e.EnterVisualMode()
 				e.Mode = 'v'
 			case 'u':
+				log.Println("Undo Pressed")
 				e.History.Execute(nil, e.Buffer, 'u')
 			case 'h':
 				e.LeftKey()
@@ -95,7 +98,7 @@ func (e *Editor) HandleKey(ev *tcell.EventKey) {
 			e.LeftKey()
 		case tcell.KeyUp:
 			e.UpKey()
-		case tcell.KeyDown:
+		case tcell.KeyDown, tcell.KeyEnter:
 			e.DownKey()
 		case tcell.KeyRune:
 			ch, _ := utf8.DecodeRuneInString(ev.Str())
@@ -138,6 +141,8 @@ func (e *Editor) EnterVisualMode() {
 func (e *Editor) Insert(key rune) {
 	x, y := e.Cursor.Position()
 	e.Buffer.InsertRune(x, y, key)
+	cmd := buffer.Init_InsertTextCommand(x, y, x, y+1, string(key))
+	e.History.Execute(cmd, e.Buffer, 'i')
 	e.Cursor.MoveRight()
 }
 func (e *Editor) Backspace() {
@@ -145,10 +150,14 @@ func (e *Editor) Backspace() {
 	x, y := e.Cursor.Position()
 	if x == 0 && y == 0 {
 	} else if y != 0 {
-		err := e.Buffer.DeleteRune(x, y-1)
+		ch, err := e.Buffer.DeleteRune(x, y-1)
 		if err != nil {
 			log.Printf("Backspace error: %v", err)
 		}
+		cmd := buffer.Init_DeleteTextCommand(x, y-1, x, y, ch)
+		log.Printf("Command init : %v ", cmd)
+		e.History.Execute(cmd, e.Buffer, 'd')
+
 		e.Cursor.MoveLeft()
 	} else {
 		length, _ := e.Buffer.LineLength(x - 1)
@@ -156,6 +165,8 @@ func (e *Editor) Backspace() {
 		if err != nil {
 			log.Printf("Merge Line error: %v", err)
 		}
+		cmd := buffer.Init_MergeLineCommand(x, 0, length)
+		e.History.Execute(cmd, e.Buffer, 'm')
 		e.Cursor.SetCursor(x-1, length)
 	}
 }
@@ -167,15 +178,21 @@ func (e *Editor) Delete() {
 	if x == e.Buffer.LineCount() && y == length {
 		// do nothing
 	} else if y != length {
-		err := e.Buffer.DeleteRune(x, y)
+		ch, err := e.Buffer.DeleteRune(x, y)
 		if err != nil {
 			log.Printf("Delete error: %v", err)
 		}
+		cmd := buffer.Init_DeleteTextCommand(x, y, x, y+1, ch)
+		e.History.Execute(cmd, e.Buffer, 'd')
+
 	} else {
 		err := e.Buffer.MergeLine(x + 1)
 		if err != nil {
 			log.Printf("Merge Line error: %v", err)
 		}
+		cmd := buffer.Init_MergeLineCommand(x+1, 0, length)
+		e.History.Execute(cmd, e.Buffer, 'm')
+
 	}
 }
 
@@ -186,6 +203,8 @@ func (e *Editor) Enter() {
 	if err != nil {
 		fmt.Printf("%v", err)
 	}
+	cmd := buffer.Init_SplitLineCommand(x, y)
+	e.History.Execute(cmd, e.Buffer, 's')
 	if x == 30 {
 		e.Renderer.IncreaseFirstLine()
 	}

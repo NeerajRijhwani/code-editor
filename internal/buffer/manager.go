@@ -1,6 +1,8 @@
 package buffer
 
 import (
+	"log"
+	"reflect"
 	"time"
 
 	"github.com/NeerajRijhwani/code-editor/internal/utils"
@@ -23,7 +25,7 @@ func Init_Manager() *Manager {
 		redo:    utils.Init_Stack[Command](),
 		pending: nil,
 		last:    time.Now(),
-		timeout: 1000 * time.Millisecond,
+		timeout: 5000 * time.Millisecond,
 	}
 }
 
@@ -36,6 +38,7 @@ func (m *Manager) Execute(cmd Command, b *Buffer, ch rune) {
 
 	default:
 		if !m.canMerge(cmd) {
+			log.Printf("Merging failed pending %v and current %v  ", m.pending, cmd)
 			m.commitPending()
 			m.pending = cmd
 			m.redo.Clear()
@@ -47,6 +50,7 @@ func (m *Manager) Execute(cmd Command, b *Buffer, ch rune) {
 func (m *Manager) executeUndo(b *Buffer) error {
 	m.commitPending()
 	cmd, err := m.undo.Pop()
+	log.Printf("Undo Command %v", cmd)
 	if err != nil {
 		return err
 	}
@@ -83,7 +87,9 @@ func (m *Manager) commitPending() {
 }
 
 func (m *Manager) canMerge(cmd Command) bool {
-	if m.pending == cmd {
+	p := reflect.TypeOf(m.pending)
+	c := reflect.TypeOf(cmd)
+	if p == c {
 		switch curr := cmd.(type) {
 		case *InsertTextCommand:
 			pendingcmd, ok := m.pending.(*InsertTextCommand)
@@ -103,25 +109,29 @@ func (m *Manager) canMerge(cmd Command) bool {
 			}
 			pendingcmd.Text += curr.Text
 			pendingcmd.End = curr.End
+			return true
 
 		case *DeleteTextCommand:
 			pendingcmd, ok := m.pending.(*DeleteTextCommand)
-			if ok {
+			if !ok {
 				return false
 			}
 			x1 := pendingcmd.Start.Row
 			y1 := pendingcmd.Start.Col
 			// adjacent request check
-			if x1 != curr.Start.Row && y1+1 != curr.Start.Col {
+			log.Printf("x1 %d and y1 %d and currx %d and curry %d", x1, y1, curr.End.Row, curr.End.Col)
+			if x1 != curr.End.Row && y1 != curr.End.Col {
 				return false
 			}
 			t := time.Now()
 			// concurrent request check based on time
 			if t.Sub(m.last) > m.timeout {
+				log.Printf("Timeout for merging")
 				return false
 			}
 			pendingcmd.Text = curr.Text + pendingcmd.Text
-			pendingcmd.End = curr.End
+			pendingcmd.Start = curr.Start
+			return true
 
 		case *SplitLineCommand:
 			return false

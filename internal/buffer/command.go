@@ -1,5 +1,7 @@
 package buffer
 
+import "log"
+
 type Command interface {
 	Undo(*Buffer) error
 	Redo(*Buffer) error
@@ -23,14 +25,15 @@ type DeleteTextCommand struct {
 }
 
 type MergeLineCommand struct {
-	Start Position
+	Start  Position
+	length int
 }
 
 type SplitLineCommand struct {
 	Start Position
 }
 
-func Init_InsertTextCommand(x1, x2, y1, y2 int, text string) *InsertTextCommand {
+func Init_InsertTextCommand(x1, y1, x2, y2 int, text string) *InsertTextCommand {
 	return &InsertTextCommand{
 		Start: Position{
 			Row: x1,
@@ -43,7 +46,7 @@ func Init_InsertTextCommand(x1, x2, y1, y2 int, text string) *InsertTextCommand 
 		Text: text,
 	}
 }
-func Init_DeleteTextCommand(x1, x2, y1, y2 int, text string) *DeleteTextCommand {
+func Init_DeleteTextCommand(x1, y1, x2, y2 int, text string) *DeleteTextCommand {
 	return &DeleteTextCommand{
 		Start: Position{
 			Row: x1,
@@ -57,12 +60,13 @@ func Init_DeleteTextCommand(x1, x2, y1, y2 int, text string) *DeleteTextCommand 
 	}
 }
 
-func Init_MergeLineCommand(x, y int) *MergeLineCommand {
+func Init_MergeLineCommand(x, y, l int) *MergeLineCommand {
 	return &MergeLineCommand{
 		Start: Position{
 			Row: x,
 			Col: y,
 		},
+		length: l,
 	}
 }
 func Init_SplitLineCommand(x, y int) *SplitLineCommand {
@@ -94,8 +98,10 @@ func (cmd *InsertTextCommand) Redo(b *Buffer) error {
 }
 
 func (cmd *DeleteTextCommand) Undo(b *Buffer) error {
+	log.Printf("Undo fo DeleteTextCommand called x = %d, y = %d", cmd.Start.Row, cmd.Start.Col)
 	err := b.InsertText(cmd.Text, cmd.Start.Row, cmd.Start.Col)
 	if err != nil {
+		log.Printf(" Error : %v", err)
 		return err
 	}
 	return nil
@@ -113,7 +119,7 @@ func (cmd *DeleteTextCommand) Redo(b *Buffer) error {
 }
 
 func (cmd *MergeLineCommand) Undo(b *Buffer) error {
-	err := b.SplitLine(cmd.Start.Row, cmd.Start.Col)
+	err := b.SplitLine(cmd.Start.Row-1, cmd.length)
 	if err != nil {
 		return err
 	}
@@ -128,7 +134,7 @@ func (cmd *MergeLineCommand) Redo(b *Buffer) error {
 	return nil
 }
 func (cmd *SplitLineCommand) Undo(b *Buffer) error {
-	err := b.MergeLine(cmd.Start.Row)
+	err := b.MergeLine(cmd.Start.Row + 1)
 	if err != nil {
 		return err
 	}

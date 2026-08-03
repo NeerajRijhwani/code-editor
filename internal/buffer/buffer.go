@@ -95,6 +95,8 @@ func (b *Buffer) InsertRune(row int, col int, ch rune) error {
 }
 
 func (b *Buffer) InsertText(text string, x, y int) error {
+	log.Printf("InsertText called %s with x %d and y %d ", text, x, y)
+	log.Printf("col : %d", len(b.lines[x]))
 	if x >= len(b.lines) || x < 0 {
 		return errors.New("Row Inavlid")
 	}
@@ -105,21 +107,21 @@ func (b *Buffer) InsertText(text string, x, y int) error {
 	return nil
 }
 
-func (b *Buffer) DeleteRune(row int, col int) error {
+func (b *Buffer) DeleteRune(row int, col int) (string, error) {
 
 	// log.Printf("%d and %d", row, col)
 	// log.Printf("Current Buffer length: %d and col : %d", len(b.lines[row]),col)
 	if len(b.lines) <= row {
-		return errors.New("row exceeds buffer length")
+		return "", errors.New("row exceeds buffer length")
 	}
 
 	if len(b.lines[row]) < col {
-		return errors.New("col exceeds buffer length")
+		return "", errors.New("col exceeds buffer length")
 	}
-
+	ch := b.lines[row][col : col+1]
 	b.lines[row] = b.lines[row][:col] + b.lines[row][col+1:]
 
-	return nil
+	return ch, nil
 }
 
 func (b *Buffer) SplitLine(row int, col int) error {
