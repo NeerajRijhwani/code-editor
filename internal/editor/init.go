@@ -1,12 +1,14 @@
 package editor
 
 import (
-	"log"
-
 	"github.com/NeerajRijhwani/code-editor/internal/buffer"
 	"github.com/NeerajRijhwani/code-editor/internal/cursor"
+	"github.com/NeerajRijhwani/code-editor/internal/plugins"
 	"github.com/NeerajRijhwani/code-editor/internal/renderer"
 	"github.com/gdamore/tcell/v3"
+	"log"
+	"path/filepath"
+	"unicode"
 )
 
 type Editor struct {
@@ -15,6 +17,7 @@ type Editor struct {
 	Renderer *renderer.Renderer
 	Select   *cursor.Selection
 	History  *buffer.Manager
+	Status   *plugins.Status
 	Mode     rune
 	Width    int
 	Height   int
@@ -37,6 +40,11 @@ func InitEditor(path string) (*Editor, error) {
 	r, err := renderer.InitRenderer()
 	s := cursor.InitSelect()
 	h := buffer.Init_Manager()
+	filetype := filepath.Ext(path)
+	runes := []rune(filetype[1:])
+	runes[0] = unicode.ToUpper(runes[0])
+
+	status := plugins.Init_StatusLine(2, 152, 31, filepath.Base(path), string(runes))
 	if err != nil {
 		return nil, err
 	}
@@ -46,6 +54,7 @@ func InitEditor(path string) (*Editor, error) {
 		Renderer: r,
 		Select:   s,
 		History:  h,
+		Status:   status,
 		Mode:     'n',
 		running:  true,
 		FilePath: path,
@@ -116,7 +125,13 @@ func (e *Editor) Render() {
 
 	e.drawCursor()
 
+	e.drawPlugins()
+
 	e.Update()
+}
+func (e *Editor) drawPlugins() {
+	x, y := e.Cursor.Position()
+	e.Status.RenderStatusLine(e.Renderer, x, y)
 }
 
 func (e *Editor) Run() {
