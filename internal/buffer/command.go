@@ -18,10 +18,16 @@ type InsertTextCommand struct {
 	Text  string
 }
 
+const (
+	Backspace = iota
+	Delete
+)
+
 type DeleteTextCommand struct {
-	Start Position
-	End   Position
-	Text  string
+	keytype int
+	Start   Position
+	End     Position
+	Text    string
 }
 
 type MergeLineCommand struct {
@@ -46,7 +52,7 @@ func Init_InsertTextCommand(x1, y1, x2, y2 int, text string) *InsertTextCommand 
 		Text: text,
 	}
 }
-func Init_DeleteTextCommand(x1, y1, x2, y2 int, text string) *DeleteTextCommand {
+func Init_DeleteTextCommand(x1, y1, x2, y2 int, text string, key int) *DeleteTextCommand {
 	return &DeleteTextCommand{
 		Start: Position{
 			Row: x1,
@@ -56,7 +62,8 @@ func Init_DeleteTextCommand(x1, y1, x2, y2 int, text string) *DeleteTextCommand 
 			Row: x2,
 			Col: y2,
 		},
-		Text: text,
+		Text:    text,
+		keytype: key,
 	}
 }
 

@@ -154,7 +154,7 @@ func (e *Editor) Backspace() {
 		if err != nil {
 			log.Printf("Backspace error: %v", err)
 		}
-		cmd := buffer.Init_DeleteTextCommand(x, y-1, x, y, ch)
+		cmd := buffer.Init_DeleteTextCommand(x, y-1, x, y, ch, 0)
 		log.Printf("Command init : %v ", cmd)
 		e.History.Execute(cmd, e.Buffer, 'd')
 
@@ -182,7 +182,7 @@ func (e *Editor) Delete() {
 		if err != nil {
 			log.Printf("Delete error: %v", err)
 		}
-		cmd := buffer.Init_DeleteTextCommand(x, y, x, y+1, ch)
+		cmd := buffer.Init_DeleteTextCommand(x, y, x, y+1, ch, 1)
 		e.History.Execute(cmd, e.Buffer, 'd')
 
 	} else {

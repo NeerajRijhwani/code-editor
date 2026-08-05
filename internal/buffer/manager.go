@@ -89,6 +89,7 @@ func (m *Manager) commitPending() {
 func (m *Manager) canMerge(cmd Command) bool {
 	p := reflect.TypeOf(m.pending)
 	c := reflect.TypeOf(cmd)
+	log.Printf("Pending cmd : %v and Incoming Cmd: %v", m.pending, cmd)
 	if p == c {
 		switch curr := cmd.(type) {
 		case *InsertTextCommand:
@@ -109,6 +110,7 @@ func (m *Manager) canMerge(cmd Command) bool {
 			}
 			pendingcmd.Text += curr.Text
 			pendingcmd.End = curr.End
+			m.last = time.Now()
 			return true
 
 		case *DeleteTextCommand:
@@ -120,17 +122,33 @@ func (m *Manager) canMerge(cmd Command) bool {
 			y1 := pendingcmd.Start.Col
 			// adjacent request check
 			log.Printf("x1 %d and y1 %d and currx %d and curry %d", x1, y1, curr.End.Row, curr.End.Col)
-			if x1 != curr.End.Row && y1 != curr.End.Col {
-				return false
+			if curr.keytype == Backspace {
+				if x1 != curr.End.Row && y1 != curr.End.Col {
+					return false
+				}
+				t := time.Now()
+				// concurrent request check based on time
+				if t.Sub(m.last) > m.timeout {
+					log.Printf("Timeout for merging")
+					return false
+				}
+				pendingcmd.Text = curr.Text + pendingcmd.Text
+				pendingcmd.Start = curr.Start
+				m.last = time.Now()
+			} else {
+				if x1 != curr.Start.Row && y1 != curr.Start.Col {
+					return false
+				}
+				t := time.Now()
+				// concurrent request check based on time
+				if t.Sub(m.last) > m.timeout {
+					log.Printf("Timeout for merging")
+					return false
+				}
+				pendingcmd.Text = pendingcmd.Text + curr.Text
+				pendingcmd.End = curr.End
+				m.last = time.Now()
 			}
-			t := time.Now()
-			// concurrent request check based on time
-			if t.Sub(m.last) > m.timeout {
-				log.Printf("Timeout for merging")
-				return false
-			}
-			pendingcmd.Text = curr.Text + pendingcmd.Text
-			pendingcmd.Start = curr.Start
 			return true
 
 		case *SplitLineCommand:
