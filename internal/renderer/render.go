@@ -1,8 +1,10 @@
 package renderer
 
 import (
-	"github.com/gdamore/tcell/v3"
+	"log"
 	"strconv"
+
+	"github.com/gdamore/tcell/v3"
 )
 
 type Theme struct {
@@ -37,10 +39,13 @@ func (r *Renderer) offset(x, y int) (int, int) {
 }
 
 func (r *Renderer) DecreaseFirstLine() {
-	r.FirstLine--
+	r.FirstLine = max(0, r.FirstLine-1)
 }
-func (r *Renderer) IncreaseFirstLine() {
-	r.FirstLine++
+func (r *Renderer) IncreaseFirstLine(count int) {
+	log.Printf("First Line: %d ad linecount : %d", r.FirstLine, count)
+	if count-r.FirstLine > 30 {
+		r.FirstLine = r.FirstLine + 1
+	}
 }
 
 func (r *Renderer) DrawBox(x1, y1, x2, y2 int, style tcell.Style) {

@@ -162,8 +162,8 @@ func (b *Buffer) LineCount() int {
 
 func (b *Buffer) LineLength(row int) (int, error) {
 
-	if len(b.lines) <= row {
-		return -1, errors.New("row exceeds buffer length")
+	if row < 0 || len(b.lines) <= row {
+		return -1, errors.New("row Invalid")
 	}
 
 	return len(b.lines[row]), nil

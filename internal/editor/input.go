@@ -198,6 +198,7 @@ func (e *Editor) Delete() {
 
 func (e *Editor) Enter() {
 	log.Println("Enter Pressed")
+	count := e.Buffer.LineCount()
 	x, y := e.Cursor.Position()
 	err := e.Buffer.SplitLine(x, y)
 	if err != nil {
@@ -206,7 +207,7 @@ func (e *Editor) Enter() {
 	cmd := buffer.Init_SplitLineCommand(x, y)
 	e.History.Execute(cmd, e.Buffer, 's')
 	if x == 30 {
-		e.Renderer.IncreaseFirstLine()
+		e.Renderer.IncreaseFirstLine(count)
 	}
 	e.Cursor.SetCursor(x+1, 0)
 	screenRow := (x + 1) - e.Renderer.FirstLine

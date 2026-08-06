@@ -1,14 +1,15 @@
 package editor
 
 import (
+	"log"
+	"path/filepath"
+	"unicode"
+
 	"github.com/NeerajRijhwani/code-editor/internal/buffer"
 	"github.com/NeerajRijhwani/code-editor/internal/cursor"
 	"github.com/NeerajRijhwani/code-editor/internal/plugins"
 	"github.com/NeerajRijhwani/code-editor/internal/renderer"
 	"github.com/gdamore/tcell/v3"
-	"log"
-	"path/filepath"
-	"unicode"
 )
 
 type Editor struct {
@@ -65,13 +66,34 @@ func InitEditor(path string) (*Editor, error) {
 }
 
 func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
-	x, y := ev.Position()
-	totalcols, _ := e.Buffer.LineLength(x)
+	y, x := ev.Position()
+	count := e.Buffer.LineCount()
+	buttons := ev.Buttons()
+	switch buttons {
+	case tcell.ButtonPrimary:
+		e.MouseClick(x, y)
+	case tcell.WheelUp:
+		log.Println("Wheel Up")
+		e.Renderer.DecreaseFirstLine()
+	case tcell.WheelDown:
+		log.Println("Wheel Down")
+		e.Renderer.IncreaseFirstLine(count)
+	}
+}
+
+func (e *Editor) MouseClick(x, y int) {
+	x, y = x-e.Renderer.Xoffset+e.Renderer.FirstLine, y-e.Renderer.Yoffset
+	log.Printf("Mouse Clicked At %d and %d ", x, y)
+	totalcols, err := e.Buffer.LineLength(x)
+	if err != nil {
+		return
+	}
 	if y > totalcols {
 		e.Cursor.SetCursor(x, totalcols-1)
 	} else {
 		e.Cursor.SetCursor(x, y)
 	}
+
 }
 
 func (e *Editor) drawBuffer() {
@@ -144,8 +166,9 @@ func (e *Editor) Run() {
 		case *tcell.EventKey:
 			e.HandleKey(ev)
 			e.Render()
-			// case *tcell.EventMouse:
-			// 	e.HandleMouse(ev)
+		case *tcell.EventMouse:
+			e.HandleMouse(ev)
+			e.Render()
 		}
 	}
 	// fmt.Println("terminal has ended")
