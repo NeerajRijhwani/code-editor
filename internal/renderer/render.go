@@ -78,17 +78,9 @@ func (r *Renderer) SetActivelinestyle(x, width int) {
 	}
 }
 
-func (r *Renderer) DrawCell(x int, y int, ch rune, mode rune) {
+func (r *Renderer) DrawCell(x int, y int, ch rune, style tcell.Style) {
 	X, Y := r.offset(x, y)
-	switch mode {
-	case 's':
-		r.Screen.SetContent(Y, X, ch, nil, r.Theme.SelectionStyle)
-	case 'a':
-		r.Screen.SetContent(Y, X, ch, nil, r.Theme.ActiveStyle)
-	default:
-		r.Screen.SetContent(Y, X, ch, nil, r.Theme.TextStyle)
-
-	}
+	r.Screen.SetContent(Y, X, ch, nil, style)
 }
 func (r *Renderer) DrawBorder(width, height int) {
 	for col := 0; col <= width; col++ {

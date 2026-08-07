@@ -10,21 +10,64 @@ import (
 	"github.com/NeerajRijhwani/code-editor/internal/plugins"
 	"github.com/NeerajRijhwani/code-editor/internal/renderer"
 	"github.com/gdamore/tcell/v3"
+	"github.com/gdamore/tcell/v3/color"
 )
 
+func (t *Theme) GetHashedColor(tokenText string) color.Color {
+	switch tokenText {
+	case "keyword":
+		return t.KeywordStyle
+	case "function":
+		return t.FunctionStyle
+	case "string":
+		return t.StringStyle
+	case "comment":
+		return t.CommentStyle
+	case "type":
+		return t.TypeStyle
+	case "number":
+		return t.NumberStyle
+	case "boolean", "constant":
+		return t.ConstantStyle
+
+	default:
+		return color.White.TrueColor()
+	}
+}
+
+type Theme struct {
+	Background     tcell.Style
+	TextStyle      tcell.Style
+	BorderStyle    tcell.Style
+	LinenumStyle   tcell.Style
+	ActiveStyle    tcell.Style
+	CursorStyle    tcell.CursorStyle
+	StatusStyle    tcell.Style
+	SelectionStyle tcell.Style
+	KeywordStyle   color.Color
+	FunctionStyle  color.Color
+	StringStyle    color.Color
+	CommentStyle   color.Color
+	TypeStyle      color.Color
+	NumberStyle    color.Color
+	ConstantStyle  color.Color
+}
+
 type Editor struct {
-	Buffer   *buffer.Buffer
-	Cursor   *cursor.Cursor
-	Renderer *renderer.Renderer
-	Select   *cursor.Selection
-	History  *buffer.Manager
-	Status   *plugins.Status
-	Mode     rune
-	Width    int
-	Height   int
-	FilePath string
-	Modified bool
-	running  bool
+	Buffer    *buffer.Buffer
+	Cursor    *cursor.Cursor
+	Renderer  *renderer.Renderer
+	Select    *cursor.Selection
+	History   *buffer.Manager
+	Status    *plugins.Status
+	Mode      rune
+	Width     int
+	Height    int
+	FilePath  string
+	Modified  bool
+	running   bool
+	Theme     Theme
+	Highlight []plugins.HighlightToken
 }
 
 func quitEditor(e *Editor) {
@@ -49,19 +92,56 @@ func InitEditor(path string) (*Editor, error) {
 	if err != nil {
 		return nil, err
 	}
+	Highlight, err := plugins.HighlightBuffer(b.GetBuffer())
+	if err != nil {
+		return nil, err
+	}
 	return &Editor{
-		Buffer:   b,
-		Cursor:   c,
-		Renderer: r,
-		Select:   s,
-		History:  h,
-		Status:   status,
-		Mode:     'n',
-		running:  true,
-		FilePath: path,
-		Modified: false,
-		Height:   240,
-		Width:    240,
+		Buffer:    b,
+		Cursor:    c,
+		Renderer:  r,
+		Select:    s,
+		History:   h,
+		Status:    status,
+		Mode:      'n',
+		running:   true,
+		FilePath:  path,
+		Modified:  false,
+		Height:    240,
+		Width:     240,
+		Highlight: Highlight,
+		Theme: Theme{
+			Background: tcell.StyleDefault.
+				Background(tcell.GetColor("#050505")),
+
+			TextStyle: tcell.StyleDefault.
+				Background(tcell.GetColor("#050505")),
+
+			BorderStyle: tcell.StyleDefault.
+				Foreground(tcell.GetColor("#6C7086")),
+
+			LinenumStyle: tcell.StyleDefault.
+				Foreground(tcell.GetColor("#7F849C")).Background(tcell.GetColor("#050505")),
+
+			ActiveStyle: tcell.StyleDefault.
+				Background(tcell.GetColor("#37373b")),
+
+			CursorStyle: tcell.CursorStyleSteadyBlock,
+
+			StatusStyle: tcell.StyleDefault.
+				Background(tcell.GetColor("#45475A")).Foreground(tcell.GetColor("#CDD6F4")),
+
+			SelectionStyle: tcell.StyleDefault.
+				Background(tcell.GetColor("#9c9a97")),
+
+			KeywordStyle:  color.NewRGBColor(203, 166, 247),
+			FunctionStyle: color.NewRGBColor(137, 180, 250),
+			StringStyle:   color.NewRGBColor(166, 227, 161),
+			CommentStyle:  color.NewRGBColor(108, 112, 134),
+			TypeStyle:     color.NewRGBColor(249, 226, 175),
+			NumberStyle:   color.NewRGBColor(250, 179, 135),
+			ConstantStyle: color.NewRGBColor(243, 139, 168),
+		},
 	}, nil
 }
 
@@ -75,9 +155,20 @@ func (e *Editor) HandleMouse(ev *tcell.EventMouse) {
 	case tcell.WheelUp:
 		log.Println("Wheel Up")
 		e.Renderer.DecreaseFirstLine()
+		curx, cury := e.Cursor.Position()
+		if curx-e.Renderer.FirstLine > 20 {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+20, cury)
+		}
+
 	case tcell.WheelDown:
 		log.Println("Wheel Down")
 		e.Renderer.IncreaseFirstLine(count)
+		curx, cury := e.Cursor.Position()
+		if count-curx > 1 && count-curx < 30 {
+			e.Cursor.MoveDown()
+		} else if curx-e.Renderer.FirstLine < 10 {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+10, cury)
+		}
 	}
 }
 
@@ -101,21 +192,57 @@ func (e *Editor) drawBuffer() {
 	count := e.Buffer.LineCount()
 	cx, _ := e.Cursor.Position()
 	for i := range min(30, count-e.Renderer.FirstLine) {
-		line, _ := e.Buffer.GetLine(i + e.Renderer.FirstLine)
-
+		bufline := i + e.Renderer.FirstLine
+		line, _ := e.Buffer.GetLine(bufline)
+		lineTokens := e.getTokensForLine(uint32(bufline))
 		for j, ch := range line {
+			col := uint32(j)
+			cellcolor := color.White.TrueColor()
+
+			var bestToken *plugins.HighlightToken
+			smallestRange := uint32(1<<32 - 1)
+
+			for idx := range lineTokens {
+				token := &lineTokens[idx]
+				if col >= token.StartCol && col < token.EndCol {
+					tokenRange := token.EndCol - token.StartCol
+
+					if tokenRange < smallestRange {
+						smallestRange = tokenRange
+						bestToken = token
+					}
+				}
+			}
+
+			if bestToken != nil {
+				cellcolor = e.Theme.GetHashedColor(bestToken.Capture)
+			}
+
 			if e.Select.Active && e.Select.CheckWithinSelect(i, j) {
-				e.Renderer.DrawCell(i, j, ch, 's')
+				cellstyle := e.Theme.SelectionStyle.Foreground(cellcolor)
+				e.Renderer.DrawCell(i, j, ch, cellstyle)
 			} else if i == cx-e.Renderer.FirstLine {
-				e.Renderer.DrawCell(i, j, ch, 'a')
+				cellstyle := e.Theme.ActiveStyle.Foreground(cellcolor)
+				e.Renderer.DrawCell(i, j, ch, cellstyle)
 			} else {
-				e.Renderer.DrawCell(i, j, ch, 'n')
+				cellstyle := e.Theme.TextStyle.Foreground(cellcolor)
+				e.Renderer.DrawCell(i, j, ch, cellstyle)
 			}
 		}
 
 		e.Renderer.DrawlineNumber(i)
 	}
 
+}
+
+func (e *Editor) getTokensForLine(lineNum uint32) []plugins.HighlightToken {
+	var lineTokens []plugins.HighlightToken
+	for _, token := range e.Highlight {
+		if token.StartLine <= lineNum && token.EndLine >= lineNum {
+			lineTokens = append(lineTokens, token)
+		}
+	}
+	return lineTokens
 }
 
 func (e *Editor) drawCursor() {

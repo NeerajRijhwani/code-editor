@@ -2,7 +2,10 @@ module github.com/NeerajRijhwani/code-editor
 
 go 1.26.5
 
-require github.com/gdamore/tcell/v3 v3.4.0
+require (
+	github.com/gdamore/tcell/v3 v3.4.0
+	github.com/smacker/go-tree-sitter v0.0.0-20240827094217-dd81d9e9be82
+)
 
 require (
 	github.com/clipperhouse/displaywidth v0.11.0 // indirect

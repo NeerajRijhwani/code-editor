@@ -3,6 +3,7 @@ package buffer
 import (
 	"errors"
 	"log"
+	"strings"
 )
 
 type Buffer struct {
@@ -61,6 +62,12 @@ func InitBuffer(lines []string) *Buffer {
 	return &Buffer{
 		lines: lines,
 	}
+}
+
+func (b *Buffer) GetBuffer() []byte {
+	str := strings.Join(b.lines, "\n")
+	buf := []byte(str)
+	return buf
 }
 
 func (b *Buffer) GetLine(i int) (string, error) {
