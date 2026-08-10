@@ -30,7 +30,7 @@ func (r *Renderer) DecreaseFirstLine() {
 	r.FirstLine = max(0, r.FirstLine-1)
 }
 func (r *Renderer) IncreaseFirstLine(count int) {
-	log.Printf("First Line: %d ad linecount : %d", r.FirstLine, count)
+	log.Printf("First Line: %d and linecount : %d", r.FirstLine, count)
 	if count-r.FirstLine > 30 {
 		r.FirstLine = r.FirstLine + 1
 	}

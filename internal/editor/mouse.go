@@ -1,6 +1,8 @@
 package editor
 
 import (
+	"log"
+
 	"github.com/gdamore/tcell/v3"
 )
 
@@ -32,22 +34,33 @@ func (e *Editor) MouseWheelDown() {
 func (e *Editor) MouseWheelUp() {
 	e.Renderer.DecreaseFirstLine()
 	curx, cury := e.Cursor.Position()
-	if curx-e.Renderer.FirstLine > 20 {
+	if curx-e.Renderer.FirstLine > 19 {
 		e.Cursor.SetCursor(e.Renderer.FirstLine+20, cury)
 	}
 
 }
 
 func (e *Editor) MouseClick(x, y int) {
-	x, y = x-e.Renderer.Xoffset+e.Renderer.FirstLine, y-e.Renderer.Yoffset
+
+	newx, newy := x-e.Renderer.Xoffset+e.Renderer.FirstLine, y-e.Renderer.Yoffset
 	totalcols, err := e.Buffer.LineLength(x)
 	if err != nil {
 		return
 	}
-	if y > totalcols {
-		e.Cursor.SetCursor(x, totalcols-1)
+	log.Printf("First Line %d and x is %d and ", e.Renderer.FirstLine, x)
+
+	if x-e.Renderer.Xoffset < 10 {
+		e.Renderer.FirstLine = max(0, e.Renderer.FirstLine-(10-x+e.Renderer.Xoffset))
+	}
+	if x-e.Renderer.Xoffset > 19 {
+		log.Printf("ans %d", x-e.Renderer.Xoffset)
+		e.Renderer.FirstLine += x - e.Renderer.Xoffset - 19
+		e.Renderer.FirstLine = min(e.Buffer.LineCount()-30, e.Renderer.FirstLine)
+	}
+	if newy > totalcols {
+		e.Cursor.SetCursor(newx, totalcols-1)
 	} else {
-		e.Cursor.SetCursor(x, y)
+		e.Cursor.SetCursor(newx, newy)
 	}
 
 }

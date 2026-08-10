@@ -168,6 +168,10 @@ func (e *Editor) Backspace() {
 		cmd := buffer.Init_MergeLineCommand(x, 0, length)
 		e.History.Execute(cmd, e.Buffer, 'm')
 		e.Cursor.SetCursor(x-1, length)
+		if x == e.Renderer.FirstLine && e.Renderer.FirstLine != 0 {
+			e.Renderer.DecreaseFirstLine()
+		}
+
 	}
 }
 
@@ -254,11 +258,11 @@ func (e *Editor) UpKey() {
 		e.Cursor.SetCursor(x, prevLen)
 	}
 	e.Cursor.MoveUp()
-	screenRow := (x - 1) - e.Renderer.FirstLine
 
-	if screenRow < 0 {
-		e.Renderer.FirstLine--
+	if x-e.Renderer.FirstLine < 10 && e.Renderer.FirstLine != 0 {
+		e.Renderer.DecreaseFirstLine()
 	}
+
 	if e.Select.Active {
 		currx, curry := e.Cursor.Position()
 		e.Select.SetEndCoord(currx, curry)
@@ -281,11 +285,10 @@ func (e *Editor) DownKey() {
 	}
 	e.Cursor.MoveDown()
 
-	screenRow := (x + 1) - e.Renderer.FirstLine
-
-	if screenRow >= 30 {
+	if x-e.Renderer.FirstLine > 20 {
 		e.Renderer.FirstLine++
 	}
+
 	if e.Select.Active {
 		currx, curry := e.Cursor.Position()
 		e.Select.SetEndCoord(currx, curry)
