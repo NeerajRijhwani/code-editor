@@ -2,6 +2,7 @@ package editor
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/NeerajRijhwani/code-editor/internal/plugins"
 	"github.com/gdamore/tcell/v3"
@@ -72,7 +73,11 @@ func (e *Editor) drawBuffer() {
 	cx, _ := e.Cursor.Position()
 	for i := range min(30, count-e.Renderer.FirstLine) {
 		bufline := i + e.Renderer.FirstLine
-		line, _ := e.Buffer.GetLine(bufline)
+		line, err := e.Buffer.GetLine(bufline)
+		if err != nil {
+			log.Printf("%v", err)
+			return
+		}
 		lineTokens := e.getTokensForLine(uint32(bufline))
 		for j, ch := range line {
 			col := uint32(j)
@@ -97,7 +102,7 @@ func (e *Editor) drawBuffer() {
 				cellcolor = e.Theme.GetColor(bestToken.Capture)
 			}
 
-			if e.Select.Active && e.Select.CheckWithinSelect(i, j) {
+			if e.Select.Active && e.Select.CheckWithinSelect(i+e.Renderer.FirstLine, j) {
 				cellstyle := e.Theme.SelectionStyle.Foreground(cellcolor)
 				e.Renderer.DrawCell(i, j, ch, cellstyle)
 			} else if i == cx-e.Renderer.FirstLine {

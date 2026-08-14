@@ -2,6 +2,7 @@ package utils
 
 import (
 	"errors"
+	"log"
 )
 
 type GapBuffer struct {
@@ -25,7 +26,7 @@ func (g *GapBuffer) Len() int {
 }
 
 func (g *GapBuffer) GapSize() int {
-	return g.gapStart - g.gapEnd + 1
+	return g.gapEnd - g.gapStart
 }
 
 func (g *GapBuffer) Get(pos int) (rune, error) {
@@ -43,9 +44,17 @@ func (g *GapBuffer) MoveGap(pos int) error {
 	if pos < 0 || pos > g.Len() {
 		return errors.New("pos Out of bound")
 	}
+	log.Printf(
+		"MoveGap: pos=%d start=%d end=%d dataLen=%d len=%d\n",
+		pos,
+		g.gapStart,
+		g.gapEnd,
+		len(g.data),
+		g.Len(),
+	)
 	if pos < g.gapStart {
 		n := g.gapStart - pos
-		copy(g.data[pos:g.gapStart], g.data[g.gapEnd-n:g.gapEnd])
+		copy(g.data[g.gapEnd-n:g.gapEnd], g.data[pos:g.gapStart])
 		g.gapStart -= n
 		g.gapEnd -= n
 	} else {
@@ -59,9 +68,9 @@ func (g *GapBuffer) MoveGap(pos int) error {
 }
 
 func (g *GapBuffer) Grow(n int) {
-	data := make([]rune, n)
+	data := make([]rune, n+len(g.data))
 	copy(data[:g.gapStart], g.data[:g.gapStart])
-	copy(data[g.gapEnd+n:], data[g.gapEnd:])
+	copy(data[g.gapEnd+n:], g.data[g.gapEnd:])
 	g.gapEnd += n
 	g.data = data
 }
@@ -78,27 +87,57 @@ func (g *GapBuffer) Insert(pos int, ch rune) error {
 	return nil
 }
 
-func (g *GapBuffer) Delete(pos int) error {
+func (g *GapBuffer) InsertText(pos int, text string) error {
 	if err := g.MoveGap(pos); err != nil {
 		return err
 	}
+	textrunes := []rune(text)
+	length := len(textrunes)
 
-	if g.gapEnd >= len(g.data) {
-		return nil
+	if g.GapSize() < length {
+		g.Grow(length - g.GapSize() + 12)
 	}
 
-	g.gapEnd++
+	copy(g.data[g.gapStart:], textrunes)
+
+	g.gapStart += length
 	return nil
 }
-func (g *GapBuffer) ToRunes() []rune {
-	data := make([]rune, g.Len())
 
+func (g *GapBuffer) Delete(pos int) (rune, error) {
+	if err := g.MoveGap(pos); err != nil {
+		return ' ', err
+	}
+
+	if g.gapEnd >= len(g.data) {
+		return ' ', nil
+	}
+	ch := g.data[pos]
+	g.gapEnd++
+	return ch, nil
+}
+
+func (g *GapBuffer) DeleteText(pos int, n int) error {
+	if pos < 0 || n < 0 || pos+n > g.Len() {
+		return errors.New("delete range out of bounds")
+	}
+
+	if err := g.MoveGap(pos); err != nil {
+		return err
+	}
+	g.gapEnd += n
+	return nil
+}
+
+func (g *GapBuffer) ToRunes() []rune {
+	length := g.Len()
+	data := make([]rune, length)
 	copy(data[:g.gapStart], g.data[:g.gapStart])
 	copy(data[g.gapStart:], g.data[g.gapEnd:])
 
 	return data
 }
 
-func (g *GapBuffer) toString() string {
+func (g *GapBuffer) ToString() string {
 	return string(g.ToRunes())
 }

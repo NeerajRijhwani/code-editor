@@ -141,6 +141,8 @@ func (e *Editor) EnterVisualMode() {
 func (e *Editor) Insert(key rune) {
 	x, y := e.Cursor.Position()
 	e.Buffer.InsertRune(x, y, key)
+	line, _ := e.Buffer.GetLine(x)
+	log.Printf("insert := %s", line)
 	cmd := buffer.Init_InsertTextCommand(x, y, x, y+1, string(key))
 	e.History.Execute(cmd, e.Buffer, 'i')
 	e.Cursor.MoveRight()

@@ -24,9 +24,20 @@ func (e *Editor) MouseWheelDown() {
 	e.Renderer.IncreaseFirstLine(count)
 	curx, cury := e.Cursor.Position()
 	if count-curx > 1 && count-curx < 30 {
-		e.Cursor.MoveDown()
+		totalcols, _ := e.Buffer.LineLength(curx + 1)
+		if totalcols < cury {
+			e.Cursor.SetCursor(curx+1, totalcols)
+		} else {
+			e.Cursor.MoveDown()
+		}
 	} else if curx-e.Renderer.FirstLine < 10 {
-		e.Cursor.SetCursor(e.Renderer.FirstLine+10, cury)
+		totalcols, _ := e.Buffer.LineLength(e.Renderer.FirstLine + 10)
+		if totalcols < cury {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+10, totalcols)
+
+		} else {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+10, cury)
+		}
 	}
 
 }
@@ -34,8 +45,13 @@ func (e *Editor) MouseWheelDown() {
 func (e *Editor) MouseWheelUp() {
 	e.Renderer.DecreaseFirstLine()
 	curx, cury := e.Cursor.Position()
+	totalcols, _ := e.Buffer.LineLength(e.Renderer.FirstLine + 20)
 	if curx-e.Renderer.FirstLine > 19 {
-		e.Cursor.SetCursor(e.Renderer.FirstLine+20, cury)
+		if totalcols < cury {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+20, totalcols)
+		} else {
+			e.Cursor.SetCursor(e.Renderer.FirstLine+20, cury)
+		}
 	}
 
 }
@@ -43,12 +59,11 @@ func (e *Editor) MouseWheelUp() {
 func (e *Editor) MouseClick(x, y int) {
 
 	newx, newy := x-e.Renderer.Xoffset+e.Renderer.FirstLine, y-e.Renderer.Yoffset
-	totalcols, err := e.Buffer.LineLength(x)
+	totalcols, err := e.Buffer.LineLength(newx)
 	if err != nil {
 		return
 	}
-	log.Printf("First Line %d and x is %d and ", e.Renderer.FirstLine, x)
-
+	log.Printf("click x=%d and y=%d and totalcol =%d", newx, newy, totalcols)
 	if x-e.Renderer.Xoffset < 10 {
 		e.Renderer.FirstLine = max(0, e.Renderer.FirstLine-(10-x+e.Renderer.Xoffset))
 	}
