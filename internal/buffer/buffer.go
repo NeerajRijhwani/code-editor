@@ -16,6 +16,46 @@ type Buffer struct {
 	lines []*utils.GapBuffer
 }
 
+func (b *Buffer) ByteColumn(line, runeCol int) (uint32, error) {
+	l, err := b.GetLine(line)
+	if err != nil {
+		return 0, err
+	}
+
+	if runeCol < 0 || runeCol > len(l) {
+		return 0, errors.New("invalid rune column")
+	}
+
+	// Convert the runes before the cursor to UTF-8 and count bytes.
+	return uint32(len(string(l[:runeCol]))), nil
+}
+
+func (b *Buffer) ByteOffset(line, runeCol int) (uint32, error) {
+	if line < 0 || line >= len(b.lines) {
+		return 0, errors.New("invalid line")
+	}
+
+	var offset uint32
+
+	// Add bytes from all previous lines.
+	for i := 0; i < line; i++ {
+		offset += uint32(b.lines[i].Len())
+
+		// Assuming your source uses '\n' between lines.
+		offset++
+	}
+
+	// Add bytes before the cursor on the current line.
+	byteCol, err := b.ByteColumn(line, runeCol)
+	if err != nil {
+		return 0, err
+	}
+
+	offset += byteCol
+
+	return offset, nil
+}
+
 func (b *Buffer) DeleteText(x1, y1, x2, y2 int) {
 	if x1 > x2 || (x1 == x2 && y1 > y2) {
 		x1, x2 = x2, x1

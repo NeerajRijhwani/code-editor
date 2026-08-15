@@ -6,6 +6,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/NeerajRijhwani/code-editor/internal/buffer"
+	"github.com/NeerajRijhwani/code-editor/internal/plugins"
 	"github.com/gdamore/tcell/v3"
 )
 
@@ -139,8 +140,22 @@ func (e *Editor) EnterVisualMode() {
 }
 
 func (e *Editor) Insert(key rune) {
+
 	x, y := e.Cursor.Position()
+
+	startByte, err := e.Buffer.ByteOffset(x, y)
+	byteColumn, err := e.Buffer.ByteColumn(x, y)
+
+	runeBytes := uint32(len(string(key)))
+	edit := plugins.GetEdit(startByte, startByte, startByte+runeBytes, uint32(x), byteColumn, uint32(x), byteColumn, uint32(x), byteColumn+runeBytes)
 	e.Buffer.InsertRune(x, y, key)
+
+	source := e.Buffer.GetBuffer()
+	err = e.TreeSitter.ApplyEdit(source, edit)
+	if err != nil {
+		log.Println(err)
+	}
+
 	line, _ := e.Buffer.GetLine(x)
 	log.Printf("insert := %s", line)
 	cmd := buffer.Init_InsertTextCommand(x, y, x, y+1, string(key))

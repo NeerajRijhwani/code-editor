@@ -71,6 +71,10 @@ func (e *Editor) drawBuffer() {
 
 	count := e.Buffer.LineCount()
 	cx, _ := e.Cursor.Position()
+	tokens, err := e.TreeSitter.HighlightBuffer()
+	if err != nil {
+		log.Printf("Unable to highlight")
+	}
 	for i := range min(30, count-e.Renderer.FirstLine) {
 		bufline := i + e.Renderer.FirstLine
 		line, err := e.Buffer.GetLine(bufline)
@@ -78,28 +82,30 @@ func (e *Editor) drawBuffer() {
 			log.Printf("%v", err)
 			return
 		}
-		lineTokens := e.getTokensForLine(uint32(bufline))
+		cellcolor := color.White.TrueColor()
+		lineTokens := e.getTokensForLine(tokens, uint32(bufline))
 		for j, ch := range line {
-			col := uint32(j)
-			cellcolor := color.White.TrueColor()
+			if lineTokens != nil {
+				col := uint32(j)
 
-			var bestToken *plugins.HighlightToken
-			smallestRange := uint32(1<<32 - 1)
+				var bestToken *plugins.HighlightToken
+				smallestRange := uint32(1<<32 - 1)
 
-			for idx := range lineTokens {
-				token := &lineTokens[idx]
-				if col >= token.StartCol && col < token.EndCol {
-					tokenRange := token.EndCol - token.StartCol
+				for idx := range lineTokens {
+					token := &lineTokens[idx]
+					if col >= token.StartCol && col < token.EndCol {
+						tokenRange := token.EndCol - token.StartCol
 
-					if tokenRange < smallestRange {
-						smallestRange = tokenRange
-						bestToken = token
+						if tokenRange < smallestRange {
+							smallestRange = tokenRange
+							bestToken = token
+						}
 					}
 				}
-			}
 
-			if bestToken != nil {
-				cellcolor = e.Theme.GetColor(bestToken.Capture)
+				if bestToken != nil {
+					cellcolor = e.Theme.GetColor(bestToken.Capture)
+				}
 			}
 
 			if e.Select.Active && e.Select.CheckWithinSelect(i+e.Renderer.FirstLine, j) {
@@ -116,12 +122,14 @@ func (e *Editor) drawBuffer() {
 
 		e.Renderer.DrawlineNumber(i, e.Theme.LinenumStyle)
 	}
-
 }
 
-func (e *Editor) getTokensForLine(lineNum uint32) []plugins.HighlightToken {
+func (e *Editor) getTokensForLine(tokens []plugins.HighlightToken, lineNum uint32) []plugins.HighlightToken {
+	if tokens == nil {
+		return nil
+	}
 	var lineTokens []plugins.HighlightToken
-	for _, token := range e.Highlight {
+	for _, token := range tokens {
 		if token.StartLine <= lineNum && token.EndLine >= lineNum {
 			lineTokens = append(lineTokens, token)
 		}

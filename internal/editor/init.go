@@ -58,10 +58,11 @@ type Editor struct {
 	Modified            bool
 	running             bool
 	Theme               Theme
-	Highlight           []plugins.HighlightToken
+	TreeSitter          *plugins.TreeSitter
 }
 
 func quitEditor(e *Editor) {
+	e.TreeSitter.CleanUp()
 	e.Renderer.Quit()
 }
 
@@ -82,7 +83,7 @@ func InitEditor(path string) (*Editor, error) {
 	if err != nil {
 		return nil, err
 	}
-	Highlight, err := plugins.HighlightBuffer(b.GetBuffer())
+	treeSitter, err := plugins.Init_Treesitter(b.GetBuffer())
 	if err != nil {
 		return nil, err
 	}
@@ -103,7 +104,7 @@ func InitEditor(path string) (*Editor, error) {
 		Modified:            false,
 		Height:              240,
 		Width:               240,
-		Highlight:           Highlight,
+		TreeSitter:          treeSitter,
 		Theme: Theme{
 			Background: tcell.StyleDefault.
 				Background(tcell.GetColor("#050505")),
